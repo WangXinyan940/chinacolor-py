@@ -21,50 +21,41 @@ theme_ctc_bronze(
 
 \item{grid_minor}{Logical: whether to show minor grid lines (default: FALSE).}
 
-\item{oxidation_level}{Character: "light" (less greenish oxidation) or "heavy"
-(more greenish oxidation, default: "heavy").}
+\item{oxidation_level}{Character: "fresh" (minimal oxidation), "light" (mild oxidation),
+"medium" (moderate oxidation), or "heavy" (heavy oxidation, default: "heavy").}
 }
 \value{
 A ggplot2 theme object.
 }
 \description{
-A theme inspired by ancient Chinese bronze ware, featuring harmoniously optimized background colors.
+A theme inspired by ancient Chinese bronze ware, featuring carefully selected colors from the
+384-color traditional palette with optimized contrast and accessibility.
 }
 \details{
+This theme emulates the aesthetic of ancient Chinese bronze ware, using exclusively colors from
+the 384-color traditional palette. Four oxidation levels are provided:
 \itemize{
-\item \strong{Background Settings}:
-\itemize{
-\item Heavy oxidation mode: Reduces the color difference by 40\% between plot background
-(#DFD6B8) and panel background (#B4A379) for a more natural transition
-\item Light oxidation mode: Maintains original soft contrast (plot background #DFD6B8 +
-panel background #C4B798)
-\item Recommended color combinations (selected from 384 colors): \strong{For discrete categories}:
-Bronze blue (#3D8E86), Secondary green (#5DA39D), Steamed chestnut (#A58A5F),
-Bird plum (#788A6F)
-}
+\item \strong{Fresh oxidation}: Minimal oxidation with soft contrast
+\item \strong{Light oxidation}: Mild oxidation with balanced colors
+\item \strong{Medium oxidation}: Moderate oxidation with good readability
+\item \strong{Heavy oxidation}: Heavy patina with authentic aged appearance
 }
 }
 \examples{
 \dontrun{
-# Example 1: Heavy oxidation mode (optimized background transition)
+# Example 1: Heavy oxidation mode (authentic aged appearance)
 ggplot(iris, aes(x = Sepal.Length, y = Petal.Length, color = Species)) +
    geom_point(size = 3) +
-   scale_color_manual(values = c("#3D8E86", "#A58A5F", "#788A6F")) +
+   scale_color_ctc_d(palette_name = 52, direction = 1) +
    theme_ctc_bronze(oxidation_level = "heavy") +
-   labs(title = "Iris dataset in bronze style: heavy oxidation", color = "Species")
+   labs(title = "青铜器风格: 重度氧化效果", color = "种类")
 
-# Example 2: Light oxidation mode (soft effect)
+# Example 2: Fresh oxidation mode (minimal oxidation)
 ggplot(mtcars, aes(x = wt, y = mpg, fill = factor(cyl))) +
    geom_point(pch = 21, size = 3) +
-   scale_fill_manual(values = c("#A58A5F", "#788A6F", "#3D8E86")) +
-   theme_ctc_bronze(oxidation_level = "light") +
-   labs(title = "Car data: light oxidation style", fill = "Number of cylinders")
-
-    ggplot(iris, aes(x = Sepal.Length, y = Petal.Length, color = Species)) +
-geom_point(size = 3) +
-   scale_color_ctc_d(palette_name = 52,direction = 1)+ # use ctc scale function
-   theme_ctc_bronze(oxidation_level = "light") +
-   labs(title = "Iris dataset in bronze style: heavy oxidation", color = "Species")
+   scale_fill_ctc_d(palette_name = 45) +
+   theme_ctc_bronze(oxidation_level = "fresh") +
+   labs(title = "青铜器风格: 新鲜青铜效果", fill = "气缸数")
 }
 }
 \seealso{

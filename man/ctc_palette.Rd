@@ -11,7 +11,8 @@ ctc_palette(
   direction = 1,
   color_pick = list(),
   show_colors = FALSE,
-  palette_title = NULL
+  palette_title = NULL,
+  palette_type = "qualitative"
 )
 }
 \arguments{
@@ -22,7 +23,7 @@ the input as below are available:
 \enumerate{
 \item the name of palette(the element name for a palette in the palette_list),such as "seq01","div18",...;
 \item index of the palette, 01-60;
-\item the palette_name value in a palette, such as "紫韵花影",for Chinese name;
+\item the palette_name value in a palette, such as "春意盎然",for Chinese name;
 \item the palette_name_e value in a palette, such as "violet_bloom",for English name;
 You can get the palette_name values and a quick preview the palettes by run \code{list_palettes()} function.
 }}
@@ -44,9 +45,16 @@ Use \code{create_color_pick()} to generate this list.}
 \item{show_colors}{Logical (TRUE/FALSE) indicating whether to display a preview of the palette. Defaults to FALSE.}
 
 \item{palette_title}{Title for the palette preview (only used when show_colors = TRUE). Defaults to NULL.}
+
+\item{palette_type}{type of custom palettes ("sequential", "diverging", or "qualitative",ONLY valid when type = "custom"). Defaults to "qualitative".}
 }
 \value{
-A character vector of hexadecimal color codes.
+A character vector of hexadecimal color codes with the following attributes:
+\itemize{
+\item \code{type}: Palette type ("sequential", "diverging", or "qualitative")
+\item \code{n}: Number of colors in the palette
+\item \code{ctc_colors}: Logical indicating if Chinese traditional colors were used
+}
 }
 \description{
 This function generates two types of color palettes: built-in palettes and custom palettes.
@@ -77,7 +85,7 @@ Valid built-in palette names/indexes:
 
 Custom palettes (type = "custom") rely on the \code{chinacolor} data, which includes color group, subgroup, and unique color_id.
 The selection logic is: first extract colors by group and subgroup, then append explicitly specified color_ids,
-and finally deduplicate and sort according to the specified rule.
+and finally de-duplicate and sort according to the specified rule.
 }
 \examples{
 \dontrun{
@@ -102,22 +110,24 @@ pal_builtin <- ctc_palette(
  # 3 Using a built-in palette BY palette_name value
  pal_div <- ctc_palette(
   type = "built_in",
-  palette_name = "古陶温光",
+  palette_name = "春意盎然",
   n = 5,
   direction = 1,
   show_colors = T
 )
 for custom palette
-# 4 Using a custom palette (filtered by group and subgroup),no plot title defined.
+# 4 Using a custom palette (filtered by group and subgroup),and plot title defined.
 custom_pick <- create_color_pick(
- groups = c(35, 27),
- subgroups = list(c(2, 4), c(1, 3)),
+ groups = c(22,13,66),
+ subgroups = list(-1,1,c(1,2,3,4)),  # -1 reverses subgroup order (4:3:2:1)
  order_rule = 1
 )
 pal_custom <- ctc_palette(
  type = "custom",
  color_pick = custom_pick,
- show_colors = TRUE
+ show_colors = TRUE,
+ palette_type = "diverging",
+ palette_title = "diverging palette"
 )
 
 # 5 Custom palette (mixing group selection with direct color_ids)

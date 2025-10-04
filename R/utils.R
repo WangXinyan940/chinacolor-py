@@ -353,3 +353,292 @@ get_system_default_font <- function() {
         "WenQuanYi Micro Hei"  # Linux default WenQuanYi Micro Hei
     }
 }
+
+
+
+#' Ensure Hue Values Are Within the 0-360 Range
+#'
+#' Adjusts hue angle values to fall within the standard [0, 360) degree range
+#' using modulo arithmetic. Useful in color space computations where hue
+#' must be normalized.
+#'
+#' @param hue A numeric vector representing hue angles in degrees.
+#'   Values can be any real number (positive, negative, or zero).
+#'
+#' @return A numeric vector of the same length as input, with each value
+#'   wrapped into the [0, 360) range using modulo 360 operation.
+#'
+#' @examples
+#' # Single values
+#' .ensure_hue_range(450)  # Returns 90
+#' .ensure_hue_range(-30)  # Returns 330
+#'
+#' # Vector input
+#' .ensure_hue_range(c(720, -720, 180.5))  # Returns c(0, 0, 180.5)
+#'
+#' @keywords internal
+#' @noRd
+#'
+.ensure_hue_range <- function(hue) {
+    hue <- hue %% 360
+    return(hue)
+}
+
+
+#' @title Generate a vector of random color hex codes
+#' @description This function generates a vector of random colors in the
+#'   polar LUV color space and converts them to hexadecimal color codes.
+#'
+#' @param n An integer specifying the number of random colors to generate.
+#'          Defaults to 1.
+#' @details The function relies on the `colorspace` package, which must be
+#'   installed and loaded using `library(colorspace)`. It uses the `max_chroma()`
+#'   and `polarLUV()` functions from this package to ensure the generated colors
+#'   are valid and visually pleasing.
+#' @return A character vector of hexadecimal color codes.
+#'
+#' @importFrom colorspace polarLUV hex max_chroma
+
+#'
+#' @examples
+#' # Generate random colors
+#' random_colors()
+#'
+#' # Generate 5 random colors
+#' random_colors(n = 5)
+
+#' @keywords internal
+#' @noRd
+
+random_colors <- function(n = 1){
+
+    # Generate 'n' random hue values (h), sampled from 0 to 360 degrees.
+    h <- sample(0:360, size = n)
+
+    # Generate 'n' random luminance (l) values, sampled from 10 to 90.
+    l <- sample(10:90, size = n)
+
+    # Calculate the maximum possible chroma (c_max) for the given
+    # hue and luminance to stay within the LUV color space.
+    c_max <- colorspace::max_chroma(h, l)
+
+    # Generate 'n' random chroma (c) values, uniformly distributed between 0 and c_max.
+    c <- runif(n, min = 0, max = c_max)
+
+    # Create a matrix with three columns (L, C, H) for the color data.
+    color_data <- matrix(data = c(l, c, h),
+                         byrow = FALSE,
+                         ncol = 3)
+
+    # Convert the LUV color data to hexadecimal color codes.
+    result <- colorspace::hex(colorspace::polarLUV(color_data),
+                              fixup = T)
+
+    # Return the vector of hexadecimal color codes.
+    return(result)
+}
+
+#' @title Find the closest colors in a reference palette
+#' @description This function finds the closest color in a `ref_colors` palette
+#'   for each color in a `target_colors` vector, using a "without replacement"
+#'   matching strategy. The color difference is calculated using the CIE2000 metric.
+#' @param target_colors A character vector of hexadecimal color codes to be matched.
+#' @param ref_colors A character vector of hexadecimal color codes representing the
+#'   reference palette to search within.
+#' @return A list with three elements:
+#'   \itemize{
+#'     \item \strong{target:} The input `target_colors`.
+#'     \item \strong{closest_ref:} A character vector of the matched hexadecimal
+#'       color codes from the `ref_colors` palette.
+#'     \item \strong{distance:} A numeric vector of the corresponding color difference
+#'       (Delta E 2000) for each match.
+#'   }
+#' @importFrom farver convert_colour compare_colour
+
+#' @examples
+#' # Example usage (assuming 'chinacolor' package is installed)
+#' # base_colors <- c("#F0F8FF", "#F5F5DC")
+#' # ref_palette <- chinacolor::chinacolor$hex
+#' # find_closest_colors(target_colors = base_colors, ref_colors = ref_palette)
+
+#' @keywords internal
+#' @noRd
+
+find_closest_colors <- function(target_colors, ref_colors) {
+    # Input Validation
+    if (!is.character(target_colors) || !all(grepl("^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$", target_colors))) {
+        stop("`target_colors` must be a character vector of valid hex codes.")
+    }
+    if (!is.character(ref_colors) || !all(grepl("^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$", ref_colors))) {
+        stop("`ref_colors` must be a character vector of valid hex codes.")
+    }
+
+    # 1. Convert colors to CIE Lab space using a helper function
+    col2lab <- function(colors) {
+        # col2rgb() is a base R function, no need to import explicitly
+        farver::convert_colour(
+            t(col2rgb(colors)),
+            from = "rgb", to = "lab",
+            white_from = "D65"
+        )
+    }
+    target_lab <- col2lab(target_colors)
+    ref_lab <- col2lab(ref_colors)
+
+    # 2. Pre-calculate distance matrix
+    # Note: This is an optional step if the target/ref lists are large
+    # distances <- farver::compare_colour(target_lab, ref_lab, from_space = "lab", method = "CIE2000")
+
+    # 3. Match without replacement: iteratively select the closest available ref color
+    n_target <- length(target_colors)
+    n_ref <- length(ref_colors)
+
+    if (n_target > n_ref) {
+        warning("The number of target colors exceeds the number of reference colors. Some targets may not be matched.")
+    }
+
+    result_target <- character(n_target)
+    result_closest <- character(n_target)
+    result_distance <- numeric(n_target)
+
+    available_refs <- ref_colors     # Available reference colors (dynamically reduced)
+    available_lab <- ref_lab        # Corresponding Lab values
+
+    for (i in 1:n_target) {
+        if (length(available_refs) == 0) {
+            # No more reference colors available
+            result_target[i] <- target_colors[i]
+            result_closest[i] <- NA_character_
+            result_distance[i] <- NA_real_
+            next
+        }
+
+        # Current target color's Lab values
+        current_target <- target_lab[i, , drop = FALSE]
+
+        # Calculate distance to all available reference colors
+        current_distances <- farver::compare_colour(
+            current_target, available_lab,
+            from_space = "lab", method = "CIE2000"
+        )
+
+        # Find the closest match
+        best_idx <- which.min(current_distances)
+
+        # Record the results
+        result_target[i] <- target_colors[i]
+        result_closest[i] <- available_refs[best_idx]
+        result_distance[i] <- current_distances[best_idx]
+
+        # Remove the selected reference color from the available list
+        available_refs <- available_refs[-best_idx]
+        available_lab <- available_lab[-best_idx, , drop = FALSE]
+    }
+
+    return(list(
+        target = result_target,
+        closest_ref = result_closest,
+        distance = result_distance
+    ))
+}
+
+
+#' @title Convert a hexadecimal color to HCL values
+#' @description An internal helper function to convert a single hexadecimal color
+#'   code to its corresponding HCL (Hue, Chroma, Luminance) values.
+#' @param hex_color A character string of a hexadecimal color code (e.g., "#ECD452").
+#' @return A numeric matrix with one row and three columns, named "H", "C", and "L",
+#'   representing the hue, chroma, and luminance of the input color.
+#' @importFrom colorspace hex2RGB polarLUV
+#' @keywords internal
+#' @noRd
+#'
+.get_hcl_values <- function(hex_color) {
+    rgb_val <- colorspace::hex2RGB(hex_color)
+    hcl_val <- as(rgb_val, "polarLUV")
+    # coords() is an S4 method that extracts coordinates from the colorspace object
+    colorspace::coords(hcl_val)
+}
+
+
+
+#' Internal: Generate lightness values for color palette
+#'
+#' This internal function calculates a sequence of lightness values centered around
+#' a base lightness value within the specified range. It ensures the generated
+#' values are evenly distributed while prioritizing the base lightness position.
+#'
+#' @param n Number of lightness values to generate
+#' @param base_lightness The central lightness value to build the sequence around
+#' @param lightness_range Numeric vector of length 2 specifying min and max lightness (0-100)
+#'
+#' @return A numeric vector of lightness values
+#'
+#' @keywords internal
+
+get_l_val <- function(n = NULL,base_lightness = NULL,lightness_range = c(15,95)){
+
+
+    l_input <- lightness_range
+
+    lightness_interval <- diff(l_input)/n
+
+    d <- (base_lightness- min(l_input)) %% lightness_interval
+
+    if(base_lightness - min(l_input) < lightness_interval){
+        l_val <- base_lightness + lightness_interval*c(0:(n-1))
+    } else{
+        if(max(l_input) - base_lightness < lightness_interval){
+            l_val <- base_lightness - lightness_interval*c(0:(n-1))
+        }else{
+            l_val <-  min(l_input) + d + lightness_interval*c(0:(n-1))
+        }
+    }
+    return(l_val)
+}
+
+
+#' Internal: Order color set by lightness
+#'
+#' This internal function sorts a set of colors by their lightness value in
+#' either ascending or descending order.
+#'
+#' @param color_set Character vector of hexadecimal color codes
+#' @param direction Sorting direction: 1 for light to dark, 2 for dark to light
+#'
+#' @return The input color set reordered by lightness
+#'
+#' @keywords internal
+
+ordered_color_set <- function(color_set,direction = 1){ #1 大到小，2 小到大
+
+    color_set_order <-  color_set %>%
+        .get_hcl_values() %>%
+        .[,1] %>%
+        order()
+
+    color_set <- if (direction == 1){
+        color_set[color_set_order]} else{
+            color_set[rev(color_set_order)]
+        }
+
+
+    return(color_set)
+}
+
+# Helper function: Handle NULL values
+#' Null Coalescing Operator
+#'
+#' Returns the first argument if it is not NULL, otherwise returns the second argument.
+#'
+#' @param a First argument.
+#' @param b Second argument (default value if `a` is NULL).
+#'
+#' @return The value of `a` if it is not NULL, otherwise the value of `b`.
+#'
+#' @keywords internal
+`%||%` <- function(a, b) {
+    if (is.null(a)) b else a
+}
+
+

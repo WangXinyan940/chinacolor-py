@@ -3,7 +3,7 @@
 \name{scale_colour_ctc_d}
 \alias{scale_colour_ctc_d}
 \alias{scale_color_ctc_d}
-\title{Discrete Color Scale for ggplot2 Using Built-in CTC Palettes (Outline Colors)}
+\title{Discrete Color Scale for ggplot2 Using Built-in CTC Palettes or Custom Palette Objects (Outline Colors)}
 \usage{
 scale_colour_ctc_d(palette_name, n = NULL, direction = 1, ...)
 
@@ -14,9 +14,10 @@ scale_color_ctc_d(palette_name, n = NULL, direction = 1, ...)
 \enumerate{
 \item the name of palette(the element name for a palette in the palette_list),such as "seq01","div18",...;
 \item index of the palette, 01-60;
-\item the palette_name value in a palette, such as "紫韵花影",for Chinese name;
+\item the palette_name value in a palette, such as "vibrant_spring",for Chinese name;
 \item the palette_name_e value in a palette, such as "violet_bloom",for English name;
-You can get the palette_name values and a quick preview the palettes by run \code{list_palettes()} function.
+\item a custom palette object with attributes (e.g., from harmonic_palette() or triadic_palette() ...functions)
+You can get the built-in palette_name values and a quick preview the palettes by run \code{list_palettes()} function.
 }}
 
 \item{n}{Number of colors to extract from the palette. If NULL (default), uses the number of unique data categories.}
@@ -30,14 +31,16 @@ A ggplot2 discrete outline color scale object.
 }
 \description{
 Creates a discrete outline color scale for ggplot2 by retrieving colors from built-in CTC palettes
-(seq01-seq20, div01-div20, qual01-qual20) via \code{ctc_palette()}.  Designed for mapping discrete/categorical data.
+(seq01-seq20, div01-div20, qual01-qual20) via \code{ctc_palette()} or from custom palette objects with attributes.
+Designed for mapping discrete/categorical data.
 }
 \details{
 \itemize{
-\item Requires \code{palette_list} loaded via \code{data(palette_list)} first.
-\item Valid palette names: sequential (seq001-seq036), diverging (div001-div029), qualitative (qual001-qual033).
+\item Supports both built-in palettes (requires \code{palette_list} loaded via \code{data(palette_list)} first)
+\item Custom palette objects with attributes.
+\item Valid built-in palette names: sequential (seq01-seq20), diverging (div01-div20), qualitative (qual01-qual20).
+\item Custom palette objects should have a "type" attribute ("qualitative").
 \item Warns if using non-qualitative palettes (designed for continuous data) with discrete data.
-\item Colors are fetched via \code{ctc_palette(type = "built_in")}.
 }
 }
 \examples{
@@ -49,18 +52,26 @@ iris$sepal_group <- cut(
    labels = paste0("组", 1:4)
 )
 
+# Using built-in palette
 ggplot(iris, aes(x = Sepal.Width,
                       y = Petal.Width,
                       color = sepal_group)) +
-   geom_point(size = 2.5) +  # 散点图
-   geom_smooth(method = "lm", se = FALSE) +  # 回归线
+   geom_point(size = 2.5) +
+   geom_smooth(method = "lm", se = FALSE) +
    scale_color_ctc_d(palette_name = 60)+  # can select palette by using index, name in list,palette_name and palette_name_e values.
    theme_ctc_dunhuang() # use the customed theme in this package.
+
+# Using custom palette with attributes
+custom_pal <-  intermediate_palette(base_color = "#ECD452", n = 6, ctc_colors = FALSE)
+ggplot(iris, aes(x = Sepal.Width, y = Petal.Width, color = sepal_group)) +
+   geom_point(size = 2.5) +
+   scale_color_ctc_d(palette_name = custom_pal) +
+   theme_ctc_dunhuang()
 }
 
 }
 \seealso{
-\code{ctc_palette()} for palette generation;
+\code{ctc_palette()},\code{harmonic_palette()} ...for palette generation;
 \code{scale_fill_ctc_d()} for fill scales;
 \code{plot_palettes()} to visualize valid palettes.
 \code{list_palettes()} to display a searchable table of all available color palettes with their identifiers with color preview.

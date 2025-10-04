@@ -10,7 +10,7 @@
 #' the input as below are available:
 #'  1. the name of palette(the element name for a palette in the palette_list),such as "seq01","div18",...;
 #'  2. index of the palette, 01-60;
-#'  3. the palette_name value in a palette, such as "紫韵花影",for Chinese name;
+#'  3. the palette_name value in a palette, such as "春意盎然",for Chinese name;
 #'  4. the palette_name_e value in a palette, such as "violet_bloom",for English name;
 #' You can get the palette_name values and a quick preview the palettes by run `list_palettes()` function.
 #'
@@ -27,8 +27,14 @@
 #'   Use `create_color_pick()` to generate this list.
 #' @param show_colors Logical (TRUE/FALSE) indicating whether to display a preview of the palette. Defaults to FALSE.
 #' @param palette_title Title for the palette preview (only used when show_colors = TRUE). Defaults to NULL.
+#' @param palette_type type of custom palettes ("sequential", "diverging", or "qualitative",ONLY valid when type = "custom"). Defaults to "qualitative".
 #'
-#' @return A character vector of hexadecimal color codes.
+#' @return A character vector of hexadecimal color codes with the following attributes:
+#'   \itemize{
+#'     \item \code{type}: Palette type ("sequential", "diverging", or "qualitative")
+#'     \item \code{n}: Number of colors in the palette
+#'     \item \code{ctc_colors}: Logical indicating if Chinese traditional colors were used
+#'   }
 #'
 #' @details
 #' Built-in palettes (type = "built_in") rely on the `palette_list` data, which CAN be loaded via `data(palette_list)` before use.
@@ -49,7 +55,7 @@
 #'
 #' Custom palettes (type = "custom") rely on the `chinacolor` data, which includes color group, subgroup, and unique color_id.
 #' The selection logic is: first extract colors by group and subgroup, then append explicitly specified color_ids,
-#' and finally deduplicate and sort according to the specified rule.
+#' and finally de-duplicate and sort according to the specified rule.
 #' @examples
 #' \dontrun{
 #' # for built_in palette
@@ -73,23 +79,25 @@
 #'  # 3 Using a built-in palette BY palette_name value
 #'  pal_div <- ctc_palette(
 #'   type = "built_in",
-#'   palette_name = "古陶温光",
+#'   palette_name = "春意盎然",
 #'   n = 5,
 #'   direction = 1,
 #'   show_colors = T
 #' )
 
 #' for custom palette
-#' # 4 Using a custom palette (filtered by group and subgroup),no plot title defined.
+#' # 4 Using a custom palette (filtered by group and subgroup),and plot title defined.
 #' custom_pick <- create_color_pick(
-#'  groups = c(35, 27),
-#'  subgroups = list(c(2, 4), c(1, 3)),
+#'  groups = c(22,13,66),
+#'  subgroups = list(-1,1,c(1,2,3,4)),  # -1 reverses subgroup order (4:3:2:1)
 #'  order_rule = 1
 #' )
 #' pal_custom <- ctc_palette(
 #'  type = "custom",
 #'  color_pick = custom_pick,
-#'  show_colors = TRUE
+#'  show_colors = TRUE,
+#'  palette_type = "diverging",
+#'  palette_title = "diverging palette"
 #' )
 #'
 #' # 5 Custom palette (mixing group selection with direct color_ids)
@@ -117,14 +125,13 @@ ctc_palette <- function(type = "built_in",
                         direction = 1,
                         color_pick = list(),
                         show_colors = FALSE,
-                        palette_title = NULL
+                        palette_title = NULL,
+                        palette_type = "qualitative"
 ) {
 
     # 1. Strictly validate 'type' parameter
     valid_types <- c("built_in", "custom")
-    # if (!type %in% valid_types) {
-    #     stop(paste("Invalid 'type' parameter. Must be one of:", paste(valid_types, collapse = ", ")))
-    # }
+
     type <- match.arg(type, choices = valid_types)
 
     # Parameter validation: Avoid cross-type parameters
@@ -135,6 +142,11 @@ ctc_palette <- function(type = "built_in",
         warning("When type='custom', 'palette_name' and 'n' parameters are ignored. Use 'color_pick' instead.")
     }
 
+
+    palette_type_attr <- NULL
+    palette_n_attr <- NULL
+    ctc_colors_attr <- NULL
+
     if (type == "built_in") {
         # Built-in palette branch
         # Check if built-in palette data exists
@@ -144,37 +156,22 @@ ctc_palette <- function(type = "built_in",
 
         # Check if palette_name is provided
         if (is.null(palette_name)) {
-            stop("When type='built_in', 'palette_name' must be provided. Valid names: seq001-seq036, div001-div029, qual001-qual033; indexes: 1-98.")
+            stop("When type='built_in', 'palette_name' must be provided. Valid names: seq01-seq20, div01-div20, qual01-qual20; indexes: 1-60.")
         }
 
-        # # Handle numeric index (position in palette_list)
-        # if (is.numeric(palette_name)) {
-        #     if (palette_name < 1 || palette_name > length(palette_list)) {
-        #         stop(paste("Invalid index. Must be between 1 and", length(palette_list), "(see plot_palettes() for valid ranges)."))
-        #     }
-        #     palette_name <- names(palette_list)[palette_name]
-        # }
-        #
-        # # Check if palette name exists
-        # if (!palette_name %in% names(palette_list)) {
-        #     stop(paste("Unknown palette name. Valid names: seq001-seq036, div001-div029, qual001-qual033. Load data and check `names(palette_list)` after running `data(palette_list)`."))
-        # }
 
-        # Get palette information (use hex field)
-        # palette_data <- palette_list[[palette_name]]
-        # base_colors <- palette_data$hex  # Use hex field uniformly
-        # base_count <- palette_data$color_count
-        # palette_type <- palette_data$type
 
         palette_data <- find_palette(palette = palette_name)
         base_colors <- palette_data$hex  # Use hex field uniformly
         base_count <- palette_data$color_count
         palette_type <- palette_data$type
-        # colors <- palette$hex
-        # color_names <- palette$name
+
         target_title <- paste0(palette_data$palette_name," ",palette_data$palette_name_e)
         palette_title <- if (!is.null(palette_title)) palette_title else target_title
 
+
+        palette_type_attr <- palette_type  # "sequential", "diverging", or "qualitative"
+        ctc_colors_attr <- TRUE  #  ctc_colors always used in built-in palettes
 
 
 
@@ -237,8 +234,11 @@ ctc_palette <- function(type = "built_in",
             palette <- rev(palette)
         }
 
+
+        palette_n_attr <- length(palette)
+
     } else if (type == "custom") {
-        # Custom palette branch (逻辑不变，保持与原有设计一致)
+        # Custom palette branch
         if (!exists("chinacolor")) {
             stop("Custom color data not loaded. Please run `data(chinacolor)` first.")
         }
@@ -275,6 +275,10 @@ ctc_palette <- function(type = "built_in",
                 }
             }
         }
+        # 1. Strictly validate 'palette_type' parameter
+        valid_palette_types <- c( "sequential", "diverging", "qualitative")
+
+        palette_type <- match.arg(palette_type, choices = valid_palette_types)
 
         # Select color IDs (in subgroup order)
         selected_ids <- c()
@@ -317,6 +321,11 @@ ctc_palette <- function(type = "built_in",
         if (!is.null(n)) pal <- if (n > length(pal)) rep(pal, length.out = n) else pal[1:n]
         palette <- pal
         palette_title <- if (!is.null(palette_title)) palette_title else "unnamed palette"
+
+
+        palette_type_attr <- palette_type  # "sequential", "diverging", or "qualitative"
+        palette_n_attr <- length(palette)
+        ctc_colors_attr <- TRUE
     }
 
     # Display color preview
@@ -325,7 +334,7 @@ ctc_palette <- function(type = "built_in",
         color_names <-  if(all(palette %in% chinacolor$hex)){
             chinacolor$name[match(palette, chinacolor$hex)]
         } else{
-          NULL
+            NULL
         }
 
 
@@ -335,5 +344,13 @@ ctc_palette <- function(type = "built_in",
         plot_palette(x = palette, type = "custom", name = palette_title,show_text = T)
     }
 
-    return(unname(palette))
+
+    result_palette <- unname(palette)
+
+
+    attr(result_palette, "type") <- palette_type_attr
+    attr(result_palette, "n") <- palette_n_attr
+    attr(result_palette, "ctc_colors") <- ctc_colors_attr
+
+    return(result_palette)
 }

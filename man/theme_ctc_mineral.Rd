@@ -8,7 +8,8 @@ theme_ctc_mineral(
   base_size = 12,
   base_family = NULL,
   grid_major = TRUE,
-  grid_minor = FALSE
+  grid_minor = FALSE,
+  background_type = "light"
 )
 }
 \arguments{
@@ -19,66 +20,75 @@ theme_ctc_mineral(
 \item{grid_major}{Logical: whether to show major grid lines (default: TRUE).}
 
 \item{grid_minor}{Logical: whether to show minor grid lines (default: FALSE).}
+
+\item{background_type}{Character: "light" (optimized contrast), "dark" (dramatic mineral), or "classic" (authentic traditional, default: "light").}
 }
 \value{
 A ggplot2 theme object.
 }
 \description{
-A theme implemented using 384 colors, emphasizing the rich saturation and vividness of traditional mineral pigments, which have been used in Chinese art for millennia.
+A theme implemented using 384 colors, emphasizing the rich saturation and vividness of traditional mineral pigments,
+with three distinct background options: "light" for optimized contrast, "dark" for dramatic mineral aesthetics,
+and "classic" for authentic traditional colors.
 }
 \details{
-This theme draws inspiration from traditional mineral pigments—naturally occurring inorganic substances prized in historical Chinese art for their intense, lightfast colors. The design balances these vivid pigments with complementary background tones to enhance readability while preserving authenticity.
+This theme draws inspiration from traditional mineral pigments—naturally occurring inorganic substances
+prized in historical Chinese art for their intense, lightfast colors. Three distinct styles are available:
+
+\strong{Light Style (background_type = "light")}:
+\itemize{
+\item Optimized contrast ratios for better readability
+\item Background: Subtle earthy greens that make mineral pigments stand out
+\item Text colors: High-contrast combinations meeting accessibility standards
+}
+
+\strong{Dark Style (background_type = "dark")}:
+\itemize{
+\item Dramatic mineral aesthetics with deep gemstone backgrounds
+\item Background: Rich jewel tones like "Qiong Lin" (#343041) for striking visual impact
+\item Text colors: Light colors that pop against dark backgrounds
+}
+
+\strong{Classic Style (background_type = "classic")}:
+\itemize{
+\item Authentic mineral pigment aesthetics from the 384-color list
+\item Background: Traditional "Jia Tan" (#CAD7C5) and "Bing Tai" (#BECAB7) creating a neutral canvas
+\item Text colors: Warm browns and sepia tones providing clear contrast
+}
 
 Key design features:
 \itemize{
-\item \strong{Background layers}: Subtle, earthy greens ("Jia Tan" #CAD7C5 for plot background and "Bing Tai" #BECAB7 for panel background) create a neutral canvas that makes mineral pigments stand out.
+\item \strong{Background layers}: Carefully selected backgrounds that make mineral pigments stand out
 \item \strong{Recommended color schemes} (all from the 384-color list):
 \itemize{
-\item Discrete data: High-saturation mineral color combinations such as "Qun Qing" (#2E59A7, lapis lazuli blue) + "Shan Hu He" (#C12C1F, cinnabar red) + "Bi Shan" (#779649, malachite green).
-\item Continuous data: Monochromatic gradients within mineral families, e.g., "Qie Lan" (#88ABDA, pale azurite) → "Qun Qing" (#2E59A7, deep lapis) or "Shui Hong" (#ECB0C1, light carmine) → "Shan Hu He" (#C12C1F, rich cinnabar).
+\item Discrete data: High-saturation mineral color combinations such as "Qun Qing" (#2E59A7, lapis lazuli blue) + "Shan Hu He" (#C12C1F, cinnabar red) + "Bi Shan" (#779649, malachite green)
+\item Continuous data: Monochromatic gradients within mineral families
 }
-\item \strong{Text and accents}: Warm browns and sepia tones ("Qing Li" #422517, "Lao Seng Yi" #A46244) provide clear contrast without competing with the vivid mineral pigments.
+\item \strong{Accessibility focus}: Color combinations meet basic readability standards while preserving cultural authenticity
 }
 }
 \examples{
 \dontrun{
-# Example 1: Categorical scatter plot (using high-saturation mineral colors)
+# Example with light style (optimized contrast)
 ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
   geom_point(size = 3) +
-  scale_color_manual(
-    values = c(
-      "#2E59A7",  # Qun Qing (lapis lazuli blue)
-      "#C12C1F",  # Shan Hu He (cinnabar red)
-      "#779649"   # Bi Shan (malachite green)
-    )
-  ) +
-  theme_ctc_mineral() +
-  labs(
-    title = "Iris species comparison",
-    x = "Sepal length (cm)",
-    y = "Sepal width (cm)",
-    color = "Species"
-  )
+  scale_color_ctc_d(palette_name = 25) +
+  theme_ctc_mineral(background_type = "light") +
+  labs(title = "矿物色彩主题数据可视化")
 
-# Example 2: Stacked bar plot (using mineral color series)
-library(dplyr)
-ggplot(mpg \%>\% count(class, drv), aes(x = class, y = n, fill = drv)) +
-  geom_col(position = "stack", linewidth = 0.3, color = "#80A492") +  # Piao Bi (border color)
-  scale_fill_manual(
-    values = c(
-      "#A67C52",  # Zhe Shi (ochre)
-      "#B8860B",  # Hu Po (amber)
-      "#D2B48C"   # Zong He Se (sienna)
-    )
-  ) +
-  theme_ctc_mineral(grid_major = FALSE) +
-  labs(
-    title = "Distribution of car classes by drive type",
-    x = "Car class",
-    y = "Count",
-    fill = "Drive type"
-  ) +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+# Example with dark style (dramatic mineral aesthetics)
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+  geom_point(size = 3) +
+  scale_color_ctc_d(palette_name = 25) +
+  theme_ctc_mineral(background_type = "dark") +
+  labs(title = "矿物色彩主题数据可视化")
+
+# Example with classic style (authentic traditional colors)
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+  geom_point(size = 3) +
+  scale_color_ctc_d(palette_name = 25) +
+  theme_ctc_mineral(background_type = "classic") +
+  labs(title = "矿物色彩主题数据可视化")
 }
 
 }

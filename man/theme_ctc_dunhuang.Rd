@@ -9,7 +9,9 @@ theme_ctc_dunhuang(
   base_family = NULL,
   grid_major = TRUE,
   grid_minor = FALSE,
-  border_style = "ornate"
+  border_style = "ornate",
+  text_angle_control = TRUE,
+  bg_type = "modern"
 )
 }
 \arguments{
@@ -22,69 +24,53 @@ theme_ctc_dunhuang(
 \item{grid_minor}{Logical: whether to show minor grid lines (default: FALSE).}
 
 \item{border_style}{Character: "simple" (thin border) or "ornate" (thick border, imitating mural frames, default: "ornate").}
+
+\item{text_angle_control}{Logical: whether to allow automatic text angle adjustment for long labels (default: TRUE).}
+
+\item{bg_type}{Character: "classic" for authentic Dunhuang mural colors or "modern" for optimized contrast (default: "modern").}
 }
 \value{
 A ggplot2 theme object with Dunhuang mural aesthetics.
 }
 \description{
 A theme strictly inspired by Dunhuang murals (4th-14th century), featuring traditional mineral pigments
-used in Buddhist art, such as cinnabar red, malachite green, and lapis lazuli blue. All colors are
-selected from your 384-color list to maintain cultural authenticity.
+used in Buddhist art, with two distinct style options: "classic" for authentic mural aesthetics and
+"modern" for optimized contrast and readability while maintaining cultural authenticity.
 }
 \details{
-Classic color schemes of Dunhuang murals (strictly selected from the 384-color list):
+Two distinct color schemes inspired by Dunhuang murals:
+
+\strong{Classic Style (bg_type = "classic")}:
 \itemize{
-\item \strong{Base background colors}:
-\itemize{
-\item Huangrun (#DFD6B8) — simulates the earth-yellow ground layer of murals;
-\item Jianxiang (#D5C8A0) — imitates the silk-like beige background
+\item Authentic mineral pigments from the 384-color list
+\item Background: Huangrun (#DFD6B8) and Jianxiang (#D5C8A0) simulating mural ground layers
+\item Text colors: Cinnabar red (#C12C1F) and indigo blue (#1A2847) imitating mural inscriptions
+\item Grid lines: Malachite green series (#206864, #3D8E86) for faint mural divisions
 }
-\item \strong{Major mineral pigments}:
+
+\strong{Modern Style (bg_type = "modern")}:
 \itemize{
-\item Cinnabar series: Shanhuhe (#C12C1F) — corresponding to cinnabar red in murals
-\item Malachite series: Shilu (#206864), Erlu (#5DA39D) — for layered rendering effects
-\item Azurite series: Qunqing (#2E59A7), Dishiqing (#003460) — imitating lapis lazuli color
-}
-\item \strong{Text color}: Huaqing (#1A2847) — high contrast with earth-yellow background, imitating mural inscriptions
+\item Optimized contrast ratios for better readability
+\item Background: Earth-yellow tones with improved text contrast
+\item Text colors: High-contrast combinations meeting accessibility standards
+\item Accent colors: Traditional mineral pigments with balanced saturation
 }
 }
 \examples{
 \dontrun{
-# Example 1: Scatter plot mimicking Dunhuang mural figures
+# Example with modern style (optimized contrast)
 ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
-  geom_point(size = 4, alpha = 0.9) +  # Translucency simulates mural fading
-  scale_color_manual(values = c(
-    "#2E59A7",  # Qunqing (imitating lapis lazuli)
-    "#C12C1F",  # Shanhuhe (imitating cinnabar)
-    "#206864"   # Shilu (imitating malachite)
-  )) +
-  theme_ctc_dunhuang(border_style = "ornate") +
-  labs(
-    title = "Iris data · Dunhuang style",
-    subtitle = "Color scheme inspired by Mogao Cave 323 murals",
-    x = "Sepal length (cm)",
-    y = "Sepal width (cm)",
-    caption = "Data source: Fisher (1936) | Color reference: Dunhuang Research Academy",
-    color = "Species"
-  )
+  geom_point(size = 4, alpha = 0.9) +
+  scale_color_ctc_d(palette_name = 25) +
+  theme_ctc_dunhuang(bg_type = "modern", border_style = "ornate") +
+  labs(title = "敦煌风格数据可视化", subtitle = "现代优化对比度效果")
 
-# Example 2: Bar plot with mural gradient
-pal_test <- palette_list$seq010$hex
-diamonds \%>\%
-  filter(cut \%in\% c("Ideal", "Premium", "Good")) \%>\%
-  group_by(cut, color) \%>\%
-  summarise(avg_price = mean(price)) \%>\%
-  ggplot(aes(x = cut, y = avg_price, fill = color)) +
-  geom_col(position = "dodge", linewidth = 0.4, color = "#1A2847") +  # Huaqing border imitating mural lines
-  scale_fill_manual(values = pal_test) +
-  theme_ctc_dunhuang(grid_major = FALSE) +
-  labs(
-    title = "Diamond price comparison · Dunhuang mineral colors",
-    x = "Cut grade",
-    y = "Average price (USD)",
-    fill = "Color grade"
-  ) +
-  theme(axis.text.x = element_text(angle = 30, hjust = 1))
+# Example with classic style (authentic mural colors)
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+  geom_point(size = 4, alpha = 0.9) +
+  scale_color_ctc_d(palette_name = 25) +
+  theme_ctc_dunhuang(bg_type = "classic", border_style = "ornate") +
+  labs(title = "敦煌风格数据可视化", subtitle = "经典壁画色彩效果")
 }
 }
 \seealso{

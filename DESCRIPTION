@@ -1,6 +1,6 @@
 Package: chinacolor
 Title: Palettes and Themes Inspired by Chinese Traditional Colors 
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     person("Zhiming", "Chen", , "zhimingc383@gmail.com", role = c("aut", "cre"))
 Description: A collection of 384 traditional Chinese colors, allowing 

@@ -8,7 +8,8 @@ theme_ctc_ink(
   base_size = 12,
   base_family = NULL,
   grid_major = TRUE,
-  grid_minor = FALSE
+  grid_minor = FALSE,
+  background_type = "light"
 )
 }
 \arguments{
@@ -19,81 +20,39 @@ theme_ctc_ink(
 \item{grid_major}{Logical: whether to show major grid lines (default: TRUE).}
 
 \item{grid_minor}{Logical: whether to show minor grid lines (default: FALSE).}
+
+\item{background_type}{Type of background: "light" (light rice paper), "medium" (aged paper), or "dark" (ink wash). Default: "light".}
 }
 \value{
 A ggplot2 theme object.
 }
 \description{
-A theme inspired by traditional Chinese ink wash painting aesthetic, featuring the "five shades of ink" technique,
-implemented using colors selected from the 384-color palette.
+A theme inspired by traditional Chinese ink wash painting aesthetic, using colors exclusively from
+the 384-color Chinese traditional palette, with optimized contrast for readability.
 }
 \details{
-This theme emulates the subtle tonal variations of traditional Chinese ink wash painting,
-where five gradations of ink (from pale to dense) create depth and texture. Key design elements:
-\itemize{
-\item \strong{Background layers}:
-\itemize{
-\item Plot background uses "Qianshan Cui" (#86908A) — a muted teal-green mimicking aged paper;
-\item Panel background uses "Jie Lü" (#6B7D73) — a soft jade-green hue evoking ink-washed silk.
+This theme uses only colors from the 384 Chinese traditional color palette, carefully selected to
+emulate the subtle tonal variations of traditional Chinese ink wash painting while ensuring text readability.
 }
-\item \strong{Ink gradations}: Colors are selected to reflect the "five shades" concept:
-\itemize{
-\item Dense ink: "Qing Li" (#422517) — deep brownish-black for primary text;
-\item Medium ink: "Laoseng Yi" (#A46244) — warm sepia for accents and axis lines;
-\item Light ink: "Li Ke" (#775039) — chestnut brown for axis text;
-\item Very light ink: "Shuang Di" (#C7C6B6) — pale grayish-beige for borders and captions;
-\item Wash layers: "Lv Yun" (#45493D) and "Ou Si Qiu Ban" (#D3CBC5) — muted greens/browns for grid lines,
-simulating diluted ink washes.
-#' @seealso
+\examples{
+\dontrun{
+# Example with light background (default)
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+  geom_point(size = 3) +
+  theme_ctc_ink() +
+  labs(title = "鸢尾花数据分布")
+
+# Example with dark ink wash background
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point(color = "#C4A661", size = 3) +  # 金笺色
+  theme_ctc_ink(background_type = "dark") +
+  labs(title = "汽车性能分析")
+}
+
+}
+\seealso{
 \code{\link{scale_color_ctc_d}},\code{\link{scale_fill_ctc_d}}
 \code{\link{scale_color_ctc_c}}, \code{\link{scale_fill_ctc_c}}
 \code{\link{scale_clor_ctc_m}}, \code{\link{scale_fill_ctc_m}}
 for color or fill scales that pair well with this theme.
-}
-}
-}
-\examples{
-\dontrun{
-# Example 1: Color scatter plot
-ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
-  geom_point(size = 3) +
-  scale_color_manual(
-    values = c(
-      "#C12C1F",  # Shanhu He (coral red)
-      "#779649",  # Bi Shan (jade green)
-      "#88ABDA"   # Qie Lan (pale blue)
-    )
-  ) +
-  theme_ctc_ink() +
-  labs(
-    title = "Iris sepal size distribution",
-    x = "Sepal length (cm)",
-    y = "Sepal width (cm)",
-    color = "Species"
-  )
-
-# Example 2: Heatmap (using sequential palette)
-library(reshape2)
-corr_data <- cor(mtcars)
-corr_melted <- melt(corr_data)
-ggplot(corr_melted, aes(x = Var1, y = Var2, fill = value)) +
-  geom_tile(linewidth = 0.3, color = "#6B798E") +  # Song Lan (indigo)
-  scale_fill_gradientn(
-    colors = c(
-      "#13393E",  # Luo Zi Dai (deep indigo)
-      "#354E6B",  # Qing Que Tou Dai (cobalt)
-      "#88ABDA",  # Qie Lan (pale blue)
-      "#D5EBE1"   # Tian Piao (pale aqua)
-    ),
-    name = "Correlation coefficient"
-  ) +
-  theme_ctc_ink(grid_major = FALSE) +
-  labs(
-    title = "Correlation analysis of car performance parameters",
-    x = NULL,
-    y = NULL
-  ) +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
-}
-
 }

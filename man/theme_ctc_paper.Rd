@@ -2,14 +2,14 @@
 % Please edit documentation in R/15.theme_ctc_paper.R
 \name{theme_ctc_paper}
 \alias{theme_ctc_paper}
-\title{CTC Paper Theme for ggplot2
-A theme inspired by traditional Chinese rice paper, with improved color harmony.}
+\title{CTC Paper Theme for ggplot2}
 \usage{
 theme_ctc_paper(
   base_size = 12,
   base_family = NULL,
   grid_major = TRUE,
-  grid_minor = FALSE
+  grid_minor = FALSE,
+  paper_type = "light"
 )
 }
 \arguments{
@@ -20,15 +20,43 @@ theme_ctc_paper(
 \item{grid_major}{Logical: whether to show major grid lines (default: TRUE).}
 
 \item{grid_minor}{Logical: whether to show minor grid lines (default: FALSE).}
+
+\item{paper_type}{Character: "light" (light rice paper), "aged" (aged paper effect), or "classic" (authentic traditional, default: "light").}
 }
 \value{
 A ggplot2 theme object that can be added to ggplot objects.
 }
 \description{
-CTC Paper Theme for ggplot2
-A theme inspired by traditional Chinese rice paper, with improved color harmony.
+A theme inspired by traditional Chinese rice paper, with optimized contrast and color harmony,
+featuring three distinct paper styles: "light" for modern readability, "aged" for vintage aesthetics,
+and "classic" for authentic traditional colors.
 }
 \details{
+This theme emulates the aesthetic of traditional Chinese rice paper, with carefully optimized
+color contrast to ensure readability while maintaining the subtle, elegant paper texture.
+Three distinct styles are available:
+
+\strong{Light Style (paper_type = "light")}:
+\itemize{
+\item Optimized contrast ratios for modern readability
+\item Background: Light rice paper tones with high contrast text
+\item Features: White panels and clear grid lines for data clarity
+}
+
+\strong{Aged Style (paper_type = "aged")}:
+\itemize{
+\item Vintage aesthetics with aged paper effects
+\item Background: Warm, yellowish tones simulating historical documents
+\item Features: Subtle grid lines and traditional color harmony
+}
+
+\strong{Classic Style (paper_type = "classic")}:
+\itemize{
+\item Authentic traditional colors from the 384-color list
+\item Background: Classic "Ning Zhi" (#F5F2E9) and "Yu Se" (#EAE4D1) paper tones
+\item Features: Warm browns and sepia tones with cultural authenticity
+}
+
 Recommended color combinations (carefully selected from 384 colors):
 \itemize{
 \item \strong{Discrete categories}: Qing Li (#422517), Shan Hu He (#C12C1F), Bi Shan (#779649), Qie Lan (#88ABDA)
@@ -42,37 +70,30 @@ Recommended color combinations (carefully selected from 384 colors):
 The color names in comments (e.g., 凝脂, 玉色) are traditional Chinese color terms, preserving cultural connotations.
 }
 \note{
-For optimal Chinese display, it is recommended to use the \code{showtext} package to manage fonts, as demonstrated in the examples.
+For optimal Chinese display, it is recommended to use the \code{showtext} package to manage fonts.
 }
 \examples{
 \dontrun{
-showtext::showtext_auto()
-font_add("zkt","C:\\\\Users\\\\czm\\\\AppData\\\\Local\\\\Microsoft\\\\Windows\\\\Fonts\\\\字酷堂清楷体.ttf")
+# Example with light style (optimized contrast)
 ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
     geom_point(size = 3) +
-    scale_color_ctc_d(palette_name = 52,name = "品种图例")+
-    theme_ctc_paper(base_family = "zkt") +
-    labs(
-        title = "鸢尾花数据可视化",
-        subtitle = "基于萼片尺寸的分类",
-        x = "萼片长度 (cm)",
-        y = "萼片宽度 (cm)",
-        caption = "数据来源: Fisher (1936)",
-        color = "品种"
-    )
-# Example 2: Continuous color example
-ggplot(mtcars, aes(x = reorder(rownames(mtcars), mpg), y = mpg, fill = hp)) +
-geom_bar(stat = "identity") +
-    scale_fill_ctc_c(palette_name = 10,name = "马力",direction = -1)+
-theme_ctc_paper(grid_major = FALSE) +
-    labs(
-        title = "汽车性能对比",
-        subtitle = "马力与燃油效率的关系",
-        x = "车型",
-        y = "每加仑英里数 (MPG)",
-        caption = "数据来源：mtcars数据集"
-    ) +
-    coord_flip()
+    scale_color_ctc_d(palette_name = 52, name = "品种图例") +
+    theme_ctc_paper(paper_type = "light") +
+    labs(title = "鸢尾花数据可视化", subtitle = "基于萼片尺寸的分类")
+
+# Example with aged style (vintage aesthetics)
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+    geom_point(size = 3) +
+    scale_color_ctc_d(palette_name = 52, name = "品种图例") +
+    theme_ctc_paper(paper_type = "aged") +
+    labs(title = "鸢尾花数据可视化", subtitle = "基于萼片尺寸的分类")
+
+# Example with classic style (authentic traditional)
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+    geom_point(size = 3) +
+    scale_color_ctc_d(palette_name = 52, name = "品种图例") +
+    theme_ctc_paper(paper_type = "classic") +
+    labs(title = "鸢尾花数据可视化", subtitle = "基于萼片尺寸的分类")
 }
 
 }

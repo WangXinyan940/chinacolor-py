@@ -11,9 +11,10 @@ scale_color_ctc_c(palette_name, direction = 1, ...)
 \enumerate{
 \item the name of palette(the element name for a palette in the palette_list),such as "seq01","div18",...;
 \item index of the palette, 01-60;
-\item the palette_name value in a palette, such as "紫韵花影",for Chinese name;
+\item the palette_name value in a palette, such as "earth_autumn",for Chinese name;
 \item the palette_name_e value in a palette, such as "violet_bloom",for English name;
-You can get the palette_name values and a quick preview the palettes by run \code{list_palettes()} function.
+\item a custom palette object with attributes (e.g., from \code{ctc_palette()},\code{diverging_palette()},\code{monochromatic_palette()} or \code{analogous_palette()})
+You can get the built-in palette_name values and a quick preview the palettes by run \code{list_palettes()} function.
 }}
 
 \item{direction}{Numeric (1 or -1) to control color order: 1 for original order, -1 for reversed. Defaults to 1.}

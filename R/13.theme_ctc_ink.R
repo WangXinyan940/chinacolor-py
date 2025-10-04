@@ -1,31 +1,21 @@
 #' CTC Ink Theme for ggplot2
 #'
-#' A theme inspired by traditional Chinese ink wash painting aesthetic, featuring the "five shades of ink" technique,
-#' implemented using colors selected from the 384-color palette.
+#' A theme inspired by traditional Chinese ink wash painting aesthetic, using colors exclusively from
+#' the 384-color Chinese traditional palette, with optimized contrast for readability.
 #'
 #' @param base_size Base font size (default: 12pt).
 #' @param base_family Font family.(default value is NotoSansSC,for broader compatibility. You can specify your preferred font.)
 #' @param grid_major Logical: whether to show major grid lines (default: TRUE).
 #' @param grid_minor Logical: whether to show minor grid lines (default: FALSE).
+#' @param background_type Type of background: "light" (light rice paper), "medium" (aged paper), or "dark" (ink wash). Default: "light".
 #'
 #' @return A ggplot2 theme object.
 #'
 #' @details
-#' This theme emulates the subtle tonal variations of traditional Chinese ink wash painting,
-#' where five gradations of ink (from pale to dense) create depth and texture. Key design elements:
+#' This theme uses only colors from the 384 Chinese traditional color palette, carefully selected to
+#' emulate the subtle tonal variations of traditional Chinese ink wash painting while ensuring text readability.
 #'
-#' - **Background layers**:
-#'   - Plot background uses "Qianshan Cui" (#86908A) — a muted teal-green mimicking aged paper;
-#'   - Panel background uses "Jie Lü" (#6B7D73) — a soft jade-green hue evoking ink-washed silk.
-#'
-#' - **Ink gradations**: Colors are selected to reflect the "five shades" concept:
-#'   - Dense ink: "Qing Li" (#422517) — deep brownish-black for primary text;
-#'   - Medium ink: "Laoseng Yi" (#A46244) — warm sepia for accents and axis lines;
-#'   - Light ink: "Li Ke" (#775039) — chestnut brown for axis text;
-#'   - Very light ink: "Shuang Di" (#C7C6B6) — pale grayish-beige for borders and captions;
-#'   - Wash layers: "Lv Yun" (#45493D) and "Ou Si Qiu Ban" (#D3CBC5) — muted greens/browns for grid lines,
-#'     simulating diluted ink washes.
-#'#' @seealso
+#' @seealso
 #' \code{\link{scale_color_ctc_d}},\code{\link{scale_fill_ctc_d}}
 #' \code{\link{scale_color_ctc_c}}, \code{\link{scale_fill_ctc_c}}
 #' \code{\link{scale_clor_ctc_m}}, \code{\link{scale_fill_ctc_m}}
@@ -34,46 +24,17 @@
 #' @import ggplot2
 #' @examples
 #' \dontrun{
-#' # Example 1: Color scatter plot
+#' # Example with light background (default)
 #' ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
 #'   geom_point(size = 3) +
-#'   scale_color_manual(
-#'     values = c(
-#'       "#C12C1F",  # Shanhu He (coral red)
-#'       "#779649",  # Bi Shan (jade green)
-#'       "#88ABDA"   # Qie Lan (pale blue)
-#'     )
-#'   ) +
 #'   theme_ctc_ink() +
-#'   labs(
-#'     title = "Iris sepal size distribution",
-#'     x = "Sepal length (cm)",
-#'     y = "Sepal width (cm)",
-#'     color = "Species"
-#'   )
+#'   labs(title = "鸢尾花数据分布")
 #'
-#' # Example 2: Heatmap (using sequential palette)
-#' library(reshape2)
-#' corr_data <- cor(mtcars)
-#' corr_melted <- melt(corr_data)
-#' ggplot(corr_melted, aes(x = Var1, y = Var2, fill = value)) +
-#'   geom_tile(linewidth = 0.3, color = "#6B798E") +  # Song Lan (indigo)
-#'   scale_fill_gradientn(
-#'     colors = c(
-#'       "#13393E",  # Luo Zi Dai (deep indigo)
-#'       "#354E6B",  # Qing Que Tou Dai (cobalt)
-#'       "#88ABDA",  # Qie Lan (pale blue)
-#'       "#D5EBE1"   # Tian Piao (pale aqua)
-#'     ),
-#'     name = "Correlation coefficient"
-#'   ) +
-#'   theme_ctc_ink(grid_major = FALSE) +
-#'   labs(
-#'     title = "Correlation analysis of car performance parameters",
-#'     x = NULL,
-#'     y = NULL
-#'   ) +
-#'   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+#' # Example with dark ink wash background
+#' ggplot(mtcars, aes(x = wt, y = mpg)) +
+#'   geom_point(color = "#C4A661", size = 3) +  # 金笺色
+#'   theme_ctc_ink(background_type = "dark") +
+#'   labs(title = "汽车性能分析")
 #' }
 #'
 #' @export
@@ -81,38 +42,140 @@ theme_ctc_ink <- function(
         base_size = 12,
         base_family = NULL,
         grid_major = TRUE,
-        grid_minor = FALSE
+        grid_minor = FALSE,
+        background_type = "light"
 ) {
     if (is.null(base_family)) {
-        base_family <- setup_chinese_font()
+        base_family <- chinacolor:::setup_chinese_font()
     }
 
+    # 定义不同背景类型对应的颜色方案 - 全部使用384色库中的颜色
+    color_schemes <- list(
+        light = list(
+            plot_bg = "#F8F4E9",      # 凝脂 - 浅米色宣纸
+            panel_bg = "#F5F2E9",     # 凝脂 - 统一色调
+            title_color = "#12264F",  # 骐驎 - 深墨色
+            text_color = "#45465E",   # 青黛 - 中墨色
+            accent_color = "#6B798E", # 菘蓝 - 淡墨色
+            grid_major = "#D3CBC5",   # 藕丝秋半
+            grid_minor = "#EAE4D1",   # 玉色
+            border_color = "#6B798E"  # 菘蓝 - 协调的边框
+        ),
+        medium = list(
+            plot_bg = "#E8DFCA",      # 黄润 - 古旧宣纸
+            panel_bg = "#F5F2E9",     # 凝脂 - 浅米色面板
+            title_color = "#1A2847",  # 花青 - 深蓝色
+            text_color = "#535164",   # 曾青 - 中蓝色
+            accent_color = "#5A6B7A", # 深灰蓝
+            grid_major = "#C7C6B6",   # 霜地
+            grid_minor = "#D5D1AE",   # 筠雾
+            border_color = "#5A6B7A"  # 深灰蓝
+        ),
+        dark = list(
+            plot_bg = "#2C2F3B",      # 绀蝶 - 水墨背景
+            panel_bg = "#45465E",     # 青黛 - 深灰蓝面板
+            title_color = "#F8F4E9",  # 凝脂 - 宣纸色文字
+            text_color = "#D5D1AE",   # 筠雾 - 米色文字
+            accent_color = "#C4A661", # 金笺色
+            grid_major = "#6B798E",   # 菘蓝 - 协调网格
+            grid_minor = "#5A6B7A",   # 深灰蓝
+            border_color = "#45465E"  # 青黛
+        )
+    )
+
+    # 验证背景类型
+    if (!background_type %in% names(color_schemes)) {
+        warning("Invalid background_type. Using 'light' instead.")
+        background_type <- "light"
+    }
+
+    colors <- color_schemes[[background_type]]
+
+    # 基础主题
     theme_bw(base_size = base_size, base_family = base_family) %+replace%
-
         theme(
-            # Background colors
-            plot.background = element_rect(fill ="#86908A",  color = NA),  # 千山翠
-            panel.background = element_rect(fill = "#6B7D73", color = "#C7C6B6", linewidth = 0.3),  # 结绿，霜地
 
-            # Text elements
-            plot.title = element_text(color = "#422517", size = base_size * 1.3, face = "bold", hjust = 0.5, margin = margin(b = 10)),  # 青骊
-            plot.subtitle = element_text(color = "#A46244", size = base_size * 0.95, hjust = 0.5, margin = margin(b = 15)),  # 老僧衣
-            plot.caption = element_text(color = "#C7C6B6", size = base_size * 0.75, hjust = 1, margin = margin(t = 10)),  # 霜地
-            axis.title = element_text(color = "#422517", size = base_size * 0.95, face = "bold"),  # 青骊
-            axis.text = element_text(color = "#775039", size = base_size * 0.85),  # 栗壳
+            plot.background = element_rect(fill = colors$plot_bg, color = NA),
+            panel.background = element_rect(fill = colors$panel_bg, color = colors$border_color, linewidth = 0.5),
 
-            # Grid lines
-            panel.grid.major = element_line(color = "#45493D", linetype = "dashed", linewidth = 0.3),  # 绿云
-            panel.grid.minor = element_line(color = "#D3CBC5", linetype = "dotted", linewidth = 0.2),  # 藕丝秋半
 
-            # Legend
-            legend.background = element_rect(fill = "#6B7D73", color = "#C7C6B6", linewidth = 0.2),  # 千山翠，霜地
-            legend.title = element_text(color = "#422517", size = base_size * 0.9, face = "bold"),  # 青骊
-            legend.text = element_text(color = "#775039", size = base_size * 0.85),  # 栗壳
+            plot.title = element_text(
+                color = colors$title_color,
+                size = base_size * 1.4,
+                face = "bold",
+                hjust = 0.5,
+                margin = margin(b = 12),
+                lineheight = 1.2
+            ),
+            plot.subtitle = element_text(
+                color = colors$text_color,
+                size = base_size * 1.1,
+                hjust = 0.5,
+                margin = margin(b = 10)
+            ),
+            plot.caption = element_text(
+                color = colors$accent_color,
+                size = base_size * 0.9,
+                hjust = 1,
+                margin = margin(t = 8)
+            ),
+            axis.title = element_text(
+                color = colors$title_color,
+                size = base_size * 1.1,
+                face = "bold"
+            ),
+            axis.text = element_text(
+                color = colors$text_color,
+                size = base_size * 0.95
+            ),
 
-            # Other elements
-            axis.line = element_line(color = "#A46244", linewidth = 0.4),  # 老僧衣
-            strip.background = element_rect(fill = "#D3CBC5", color = "#C7C6B6", linewidth = 0.3),  # 藕丝秋半，霜地
-            strip.text = element_text(color = "#422517", size = base_size * 0.9, face = "bold")  # 青骊
+
+            panel.grid.major = if (grid_major) {
+                element_line(color = colors$grid_major, linewidth = 0.3, linetype = "dashed")
+            } else {
+                element_blank()
+            },
+            panel.grid.minor = if (grid_minor) {
+                element_line(color = colors$grid_minor, linewidth = 0.2, linetype = "dotted")
+            } else {
+                element_blank()
+            },
+
+
+            legend.background = element_rect(
+                fill = alpha(colors$panel_bg, 0.9),
+                color = colors$border_color,
+                linewidth = 0.3
+            ),
+            legend.title = element_text(
+                color = colors$title_color,
+                size = base_size * 1.05,
+                face = "bold"
+            ),
+            legend.text = element_text(
+                color = colors$text_color,
+                size = base_size * 0.95
+            ),
+            legend.key = element_rect(fill = "transparent", color = NA),
+
+
+            axis.line = element_line(color = colors$accent_color, linewidth = 0.5),
+            axis.ticks = element_line(color = colors$accent_color, linewidth = 0.4),
+
+            strip.background = element_rect(
+                fill = colors$accent_color,
+                color = colors$border_color,
+                linewidth = 0.4
+            ),
+            strip.text = element_text(
+                color = if (background_type == "dark") colors$title_color else colors$panel_bg,
+                size = base_size * 1.0,
+                face = "bold"
+            ),
+
+
+            plot.margin = margin(20, 20, 20, 20),
+            panel.spacing = unit(12, "points")
         )
 }
+
