@@ -14,7 +14,6 @@
 
 <!-- badges: end -->
 
-------------------------------------------------------------------------
 
 ## ✨ Latest Updates
 
@@ -102,7 +101,7 @@ alt="All 384 Colors with Group ID" />
 <img src="image/color/colors_by_solar_term/2.雨水_Rain_Water.png"
 width="600" alt="Colors Grouped by Solar Term" />
 <figcaption aria-hidden="true">Colors Grouped by Solar Term</figcaption>
-</figure>
+<figure>
 
 <figure>
 <img src="image/palettes/palette_1.png" width="600"
@@ -1082,7 +1081,10 @@ ggplot(df, aes(x, y, fill = z)) +
 
 <img src="figures/READMECN-unnamed-chunk-55-1.png" width="60%" />
 
-## Adapted for ggplot Plotting: scales Series Functions and theme Templates
+ 
+##  Adapted for ggplot Plotting: scales Series Functions and theme Templates
+ 
+ 
 
 ### Update Notes
 
@@ -1365,6 +1367,6 @@ ggplot(iris, aes(Sepal.Length, Sepal.Width, fill = Species)) +
 Issues report：<https://github.com/zhiming-chen/chinacolor/issues>.
 
 Palettes contribution and suggestions for improvement and optimization
-is welcome!!
+are welcome!!
 
 Gmail: <zhimingc383@gmail.com>

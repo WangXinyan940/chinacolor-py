@@ -80,8 +80,7 @@ aria-hidden="true">带颜色分组编码的全部384种颜色</figcaption>
 <figure>
 <img src="image/color/colors_by_solar_term/2.雨水_Rain_Water.png"
 width="600" alt="按节气分组的颜色" />
-<figcaption aria-hidden="true">按节气分组的颜色</figcaption>
-</figure>
+<figure>
 
 <figure>
 <img src="image/palettes/palette_1.png" width="600" alt="调色板示例" />
