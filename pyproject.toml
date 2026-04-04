@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chinacolor-matplotlib"
+version = "0.1.0"
+description = "China traditional color palettes for Python and matplotlib"
+readme = "README.zh-CN.md"
+requires-python = ">=3.10"
+dependencies = [
+    "matplotlib>=3.10",
+    "numpy>=2.4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=9.0"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+chinacolor = ["data/*.json"]

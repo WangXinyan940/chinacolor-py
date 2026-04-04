@@ -2,3 +2,14 @@
 .Rhistory
 .RData
 .Ruserdata
+# pixi environments
+.pixi/
+!.pixi/config.toml
+__pycache__/
+.pytest_cache/
+*.pyc
+dist/
+build/
+*.egg-info/
+pixi.lock
+pixi.toml

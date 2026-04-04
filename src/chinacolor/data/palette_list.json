@@ -1,0 +1,2448 @@
+[
+  {
+    "hex": [
+      "#DDB078",
+      "#D2A36C",
+      "#BE9457",
+      "#9E8358",
+      "#94784F",
+      "#7C623F"
+    ],
+    "name": [
+      "九斤黄",
+      "芸黄",
+      "金埒",
+      "降真香",
+      "大云",
+      "射干"
+    ],
+    "palette_name": [
+      "大地金秋"
+    ],
+    "palette_name_e": [
+      "earth_autumn"
+    ],
+    "description_cn": [
+      "温暖的大地色系，从浅蜜糖到深咖啡的自然过渡，营造沉稳、质朴的秋季氛围。适用于自然主题、家居设计、文艺风格和秋季促销视觉。"
+    ],
+    "description_en": [
+      "A warm earth-tone palette transitioning from light honey to deep coffee, creating a stable and rustic autumn atmosphere. Suitable for natural themes, home decor, literary styles, and autumn promotional visuals."
+    ],
+    "type": [
+      "sequential"
+    ],
+    "color_count": [
+      6
+    ],
+    "key": "seq01",
+    "index": 1
+  },
+  {
+    "hex": [
+      "#F9D3E3",
+      "#ECB0C1",
+      "#DE82A7",
+      "#CC73A0",
+      "#B95A89",
+      "#A73766"
+    ],
+    "name": [
+      "盈盈",
+      "水红",
+      "龙膏烛",
+      "黪紫",
+      "胭脂水",
+      "魏红"
+    ],
+    "palette_name": [
+      "绯色年华"
+    ],
+    "palette_name_e": [
+      "blooming_blush"
+    ],
+    "description_cn": [
+      "从清透的浅绯色到浓郁的酒红色，如花朵绽放般的渐变色调，充满青春活力与浪漫气息。适用于美妆、时尚、女性品牌及浪漫主题设计。"
+    ],
+    "description_en": [
+      "A gradient from translucent light blush to rich wine red, resembling blooming flowers, full of youthful vitality and romantic charm. Ideal for cosmetics, fashion, feminine branding, and romantic theme designs."
+    ],
+    "type": [
+      "sequential"
+    ],
+    "color_count": [
+      6
+    ],
+    "key": "seq02",
+    "index": 2
+  },
+  {
+    "hex": [
+      "#DCC7E1",
+      "#BBA1CB",
+      "#A67EB7",
+      "#7D5284",
+      "#663D74",
+      "#422256"
+    ],
+    "name": [
+      "昌荣",
+      "紫薄汗",
+      "茈藐",
+      "紫紶",
+      "三公子",
+      "凝夜紫"
+    ],
+    "palette_name": [
+      "紫韵秘境"
+    ],
+    "palette_name_e": [
+      "mystic_lavender"
+    ],
+    "description_cn": [
+      "从朦胧的薄雾紫到深邃的暗夜紫，营造出神秘而优雅的紫色系渐变，带有梦幻与贵族气质。适用于美妆、神秘主题、女性高端品牌及艺术创作。"
+    ],
+    "description_en": [
+      "A gradient from hazy misty purple to deep night purple, creating a mysterious and elegant purple palette with dreamy and noble qualities. Perfect for cosmetics, mystical themes, high-end feminine branding, and artistic creations."
+    ],
+    "type": [
+      "sequential"
+    ],
+    "color_count": [
+      6
+    ],
+    "key": "seq03",
+    "index": 3
+  },
+  {
+    "hex": [
+      "#F6BEC8",
+      "#E2A2AC",
+      "#F091A0",
+      "#DC6B82",
+      "#C25160",
+      "#B04552",
+      "#9E4E56"
+    ],
+    "name": [
+      "桃夭",
+      "彤管",
+      "杨妃",
+      "长春",
+      "唇脂",
+      "鞓红",
+      "紫矿"
+    ],
+    "palette_name": [
+      "珊瑚暖绯"
+    ],
+    "palette_name_e": [
+      "coral_warmth"
+    ],
+    "description_cn": [
+      "温暖活泼的珊瑚粉色系，从柔和的浅珊瑚到沉稳的陶土红，充满活力与温暖感。适用于青春品牌、春夏设计、美妆产品及温暖主题的视觉表达。"
+    ],
+    "description_en": [
+      "A warm and vibrant coral pink palette, transitioning from soft light coral to earthy terracotta red, full of vitality and warmth. Ideal for youth brands, spring-summer designs, cosmetic products, and warm-themed visual expressions."
+    ],
+    "type": [
+      "sequential"
+    ],
+    "color_count": [
+      7
+    ],
+    "key": "seq04",
+    "index": 4
+  },
+  {
+    "hex": [
+      "#D3CCD6",
+      "#F0CFE3",
+      "#CE93BF",
+      "#A6559D",
+      "#8A1874",
+      "#6C216D",
+      "#422256"
+    ],
+    "name": [
+      "香炉紫烟",
+      "退红",
+      "丁香",
+      "紫蒲",
+      "赪紫",
+      "齐紫",
+      "凝夜紫"
+    ],
+    "palette_name": [
+      "幽兰绀紫"
+    ],
+    "palette_name_e": [
+      "mystic_purple"
+    ],
+    "description_cn": [
+      "淡紫至深绀紫的色阶，如香雾缭绕，展现神秘高贵之气。适用于珠宝包装、文艺设计及夜间场景渲染。"
+    ],
+    "description_en": [
+      "From light lavender to deep indigo, this palette evokes mystical elegance. Ideal for jewelry packaging, artistic design, and nighttime themes."
+    ],
+    "type": [
+      "sequential"
+    ],
+    "color_count": [
+      7
+    ],
+    "key": "seq05",
+    "index": 5
+  },
+  {
+    "hex": [
+      "#FFF799",
+      "#FFEE6F",
+      "#ECD452",
+      "#D6BC46",
+      "#B6A014",
+      "#AA9649",
+      "#938F4C",
+      "#7F754C",
+      "#595333"
+    ],
+    "name": [
+      "黄白游",
+      "松花",
+      "缃叶",
+      "姚黄",
+      "苍黄",
+      "大赤",
+      "绿沈",
+      "绞衣",
+      "素綦"
+    ],
+    "palette_name": [
+      "金秋丰韵"
+    ],
+    "palette_name_e": [
+      "golden_harvest"
+    ],
+    "description_cn": [
+      "丰富层次的金黄色系，从明亮的淡鹅黄到沉稳的深棕黄，宛如秋季丰收的田野，充满温暖与富足感。适用于秋季主题、农产品、奢华品牌和温暖氛围的营造。"
+    ],
+    "description_en": [
+      "A richly layered golden-yellow palette, ranging from bright light yellow to deep brownish-yellow, reminiscent of autumn harvest fields, full of warmth and abundance. Suitable for autumn themes, agricultural products, luxury branding, and creating warm atmospheres."
+    ],
+    "type": [
+      "sequential"
+    ],
+    "color_count": [
+      9
+    ],
+    "key": "seq06",
+    "index": 6
+  },
+  {
+    "hex": [
+      "#F8C6B5",
+      "#F3A694",
+      "#EF845D",
+      "#ED6D3D",
+      "#EA5514",
+      "#CC5D20",
+      "#9F5221"
+    ],
+    "name": [
+      "十样锦",
+      "海天霞",
+      "赪尾",
+      "苕荣",
+      "黄丹",
+      "光明砂",
+      "韎韐"
+    ],
+    "palette_name": [
+      "橘暖时光"
+    ],
+    "palette_name_e": [
+      "warm_glow"
+    ],
+    "description_cn": [
+      "从柔和的蜜桃肤色到浓郁的深土橙色，呈现温暖而充满活力的橙色渐变，如同秋日阳光般明媚动人。适用于食品品牌、秋季设计、促销活动及温暖活力的视觉传达。"
+    ],
+    "description_en": [
+      "A warm and vibrant orange gradient, transitioning from soft peach skin to rich deep earth orange, as bright and charming as autumn sunshine. Ideal for food branding, autumn designs, promotional events, and warm, energetic visual communication."
+    ],
+    "type": [
+      "sequential"
+    ],
+    "color_count": [
+      7
+    ],
+    "key": "seq07",
+    "index": 7
+  },
+  {
+    "hex": [
+      "#E5A84B",
+      "#DB9B34",
+      "#BE8A2F",
+      "#AA8534",
+      "#8B7042",
+      "#81663B",
+      "#5F4321"
+    ],
+    "name": [
+      "黄河琉璃",
+      "黄不老",
+      "蛾黄",
+      "老茯神",
+      "流黄",
+      "远志",
+      "龙战"
+    ],
+    "palette_name": [
+      "琥珀大地"
+    ],
+    "palette_name_e": [
+      "amber_earth"
+    ],
+    "description_cn": [
+      "温暖醇厚的琥珀大地色系，从明亮的琥珀金色到深邃的巧克力棕，展现自然质朴的成熟韵味。适用于秋季主题、自然品牌、手工制品和稳重可靠的品牌形象。"
+    ],
+    "description_en": [
+      "A warm and rich amber earth-tone palette, ranging from bright amber gold to deep chocolate brown, showcasing a natural and rustic mature charm. Perfect for autumn themes, natural brands, handmade products, and reliable brand imagery."
+    ],
+    "type": [
+      "sequential"
+    ],
+    "color_count": [
+      7
+    ],
+    "key": "seq08",
+    "index": 8
+  },
+  {
+    "hex": [
+      "#A8BF8F",
+      "#A8B78C",
+      "#90A07D",
+      "#788A6F",
+      "#5D7259",
+      "#555F4D"
+    ],
+    "name": [
+      "苍葭",
+      "兰苕",
+      "碧滋",
+      "雀梅",
+      "油绿",
+      "结绿"
+    ],
+    "palette_name": [
+      "林间雾色"
+    ],
+    "palette_name_e": [
+      "forest_mist"
+    ],
+    "description_cn": [
+      "一组宁静而富有生机的灰绿色系，从清新的嫩芽绿到沉稳的墨绿，如同晨雾中的森林，充满自然呼吸感。适用于自然主题、环保设计、文艺风格和舒缓视觉的营造。"
+    ],
+    "description_en": [
+      "A serene and vibrant set of muted greens, transitioning from fresh sprout green to deep pine green, evoking the feeling of a forest in morning mist. Ideal for natural themes, eco-friendly designs, literary styles, and creating calming visual experiences."
+    ],
+    "type": [
+      "sequential"
+    ],
+    "color_count": [
+      6
+    ],
+    "key": "seq09",
+    "index": 9
+  },
+  {
+    "hex": [
+      "#FFFBC7",
+      "#F7EEAD",
+      "#ECE093",
+      "#D6C560",
+      "#C0AD5E",
+      "#AA9649",
+      "#8F3D2C"
+    ],
+    "name": [
+      "半见",
+      "女贞黄",
+      "绢纨",
+      "姜黄",
+      "栾华",
+      "大赤",
+      "佛赤"
+    ],
+    "palette_name": [
+      "琥珀流光"
+    ],
+    "palette_name_e": [
+      "amber_glow"
+    ],
+    "description_cn": [
+      "黄系到深棕的过渡，如琥珀中流动的光线。适用于文博展陈、陶瓷工艺及中式文创产品。"
+    ],
+    "description_en": [
+      "From soft yellows to deep amber, this palette mimics flowing light within amber. Great for museums, ceramics, and cultural design."
+    ],
+    "type": [
+      "sequential"
+    ],
+    "color_count": [
+      7
+    ],
+    "key": "seq10",
+    "index": 10
+  },
+  {
+    "hex": [
+      "#F5F2E9",
+      "#EAE4D1",
+      "#DFD6B8",
+      "#D5C8A0",
+      "#BFA670",
+      "#AA8E59",
+      "#7C5B3E"
+    ],
+    "name": [
+      "凝脂",
+      "玉色",
+      "黄润",
+      "缣缃",
+      "沙饧",
+      "巨吕",
+      "驼褐"
+    ],
+    "palette_name": [
+      "柔沙古调"
+    ],
+    "palette_name_e": [
+      "soft_sand"
+    ],
+    "description_cn": [
+      "奶白至驼棕的调性，低饱和、高雅古朴。适合文艺出版、书籍装帧与复古家具。"
+    ],
+    "description_en": [
+      "From ivory to camel tones, this soft and elegant palette evokes vintage calmness. Great for publishing, book covers, and retro furniture."
+    ],
+    "type": [
+      "sequential"
+    ],
+    "color_count": [
+      7
+    ],
+    "key": "seq11",
+    "index": 11
+  },
+  {
+    "hex": [
+      "#EBEEE8",
+      "#EAEEF1",
+      "#D5EBE1",
+      "#B1D5C8",
+      "#99BCAC",
+      "#80A492",
+      "#6B7D73"
+    ],
+    "name": [
+      "皦玉",
+      "浅云",
+      "天缥",
+      "沧浪",
+      "苍筤",
+      "缥碧",
+      "千山翠"
+    ],
+    "palette_name": [
+      "缥缈青岚"
+    ],
+    "palette_name_e": [
+      "misty_teal"
+    ],
+    "description_cn": [
+      "由白灰至青绿过渡，如山间晨雾淡影。推荐用于香氛、茶艺、养生品牌视觉表达。"
+    ],
+    "description_en": [
+      "A gentle gradient from pale gray to teal green, resembling mountain mists. Ideal for fragrance, tea, and wellness branding."
+    ],
+    "type": [
+      "sequential"
+    ],
+    "color_count": [
+      7
+    ],
+    "key": "seq12",
+    "index": 12
+  },
+  {
+    "hex": [
+      "#D5EBE1",
+      "#B1D5C8",
+      "#99BCAC",
+      "#80A492",
+      "#68945C",
+      "#4C8045",
+      "#4F6F46",
+      "#446A37",
+      "#2A6E3F"
+    ],
+    "name": [
+      "天缥",
+      "沧浪",
+      "苍筤",
+      "缥碧",
+      "庭芜绿",
+      "翠微",
+      "青青",
+      "翠虬",
+      "官绿"
+    ],
+    "palette_name": [
+      "翠隐山庭"
+    ],
+    "palette_name_e": [
+      "jade_garden"
+    ],
+    "description_cn": [
+      "以绿色为主，浓淡层次分明，如古园深处之意境。适用于国风插画、生态旅游、园林规划等领域。"
+    ],
+    "description_en": [
+      "A green-centric palette with clear gradation, evoking classical gardens. Perfect for Chinese-style illustration, ecotourism, and landscaping."
+    ],
+    "type": [
+      "sequential"
+    ],
+    "color_count": [
+      9
+    ],
+    "key": "seq13",
+    "index": 13
+  },
+  {
+    "hex": [
+      "#C3D94E",
+      "#9EBC19",
+      "#84A729",
+      "#779649",
+      "#6C8650",
+      "#446A37"
+    ],
+    "name": [
+      "青粲",
+      "人籁",
+      "水龙吟",
+      "碧山",
+      "葱倩",
+      "翠虬"
+    ],
+    "palette_name": [
+      "春意盎然"
+    ],
+    "palette_name_e": [
+      "vibrant_spring"
+    ],
+    "description_cn": [
+      "一组充满活力的黄绿色系，从明亮的嫩黄绿到深邃的森林绿，如同春日新生的植被，充满生机与希望。适用于自然主题、健康品牌、环保设计和活力视觉的传达。"
+    ],
+    "description_en": [
+      "A vibrant yellow-green palette, ranging from bright lime green to deep forest green, reminiscent of spring vegetation, full of vitality and hope. Perfect for natural themes, health brands, eco-friendly designs, and energetic visual communication."
+    ],
+    "type": [
+      "sequential"
+    ],
+    "color_count": [
+      6
+    ],
+    "key": "seq14",
+    "index": 14
+  },
+  {
+    "hex": [
+      "#F8C6B5",
+      "#F3A694",
+      "#E67762",
+      "#CB523E",
+      "#BA5140",
+      "#8F3D2C",
+      "#662B1F"
+    ],
+    "name": [
+      "十样锦",
+      "海天霞",
+      "小红",
+      "赩炽",
+      "纁黄",
+      "佛赤",
+      "木兰"
+    ],
+    "palette_name": [
+      "赤陶渐变"
+    ],
+    "palette_name_e": [
+      "terra_cotta"
+    ],
+    "description_cn": [
+      "从柔和的浅陶粉色到浓郁的暗陶红色，灵感来自天然陶土的温暖质感，展现质朴而热情的地中海风情。适用于手工艺品、家居设计、餐饮品牌和温暖质朴的视觉风格。"
+    ],
+    "description_en": [
+      "A warm gradient from soft terracotta pink to rich dark clay red, inspired by the natural texture of baked earth, showcasing rustic and passionate Mediterranean charm. Ideal for handicrafts, home decor, culinary brands, and warm, earthy visual styles."
+    ],
+    "type": [
+      "sequential"
+    ],
+    "color_count": [
+      7
+    ],
+    "key": "seq15",
+    "index": 15
+  },
+  {
+    "hex": [
+      "#F0C2A2",
+      "#DB9C5E",
+      "#D9883D",
+      "#BC6E37",
+      "#9F6027",
+      "#7C461E"
+    ],
+    "name": [
+      "扶光",
+      "椒房",
+      "红友",
+      "媚蝶",
+      "黄流",
+      "紫瓯"
+    ],
+    "palette_name": [
+      "琥珀暖阳"
+    ],
+    "palette_name_e": [
+      "amber_glow"
+    ],
+    "description_cn": [
+      "温暖而浓郁的琥珀色调，从柔和的浅杏色到深沉的浓咖啡色，如同夕阳下的琥珀光泽，充满温暖与醇厚感。适用于秋季主题、美食品牌、手工制品和温馨氛围的营造。"
+    ],
+    "description_en": [
+      "A warm and rich amber-toned palette, transitioning from soft light apricot to deep coffee brown, evoking the glow of amber in the setting sun, full of warmth and richness. Perfect for autumn themes, food branding, handmade products, and creating cozy atmospheres."
+    ],
+    "type": [
+      "sequential"
+    ],
+    "color_count": [
+      6
+    ],
+    "key": "seq16",
+    "index": 16
+  },
+  {
+    "hex": [
+      "#D4E5EF",
+      "#BCD4E7",
+      "#A3BBDB",
+      "#88ABDA",
+      "#6F94CD",
+      "#4994C4",
+      "#106898",
+      "#003D74"
+    ],
+    "name": [
+      "月白",
+      "星郎",
+      "晴山",
+      "窃蓝",
+      "监德",
+      "孔雀蓝",
+      "柔蓝",
+      "绀宇"
+    ],
+    "palette_name": [
+      "碧霄流澈"
+    ],
+    "palette_name_e": [
+      "sky_waves"
+    ],
+    "description_cn": [
+      "蓝色的纵深变化，如空中流动之澈蓝云雾。适合高科技、天空主题或高阶展示空间。"
+    ],
+    "description_en": [
+      "Gradient of blues like flowing sky. Suitable for tech, aerial themes, and immersive visual environments."
+    ],
+    "type": [
+      "sequential"
+    ],
+    "color_count": [
+      8
+    ],
+    "key": "seq17",
+    "index": 17
+  },
+  {
+    "hex": [
+      "#A3BBDB",
+      "#A4ABD6",
+      "#6F94CD",
+      "#5976BA",
+      "#2E59A7",
+      "#354E6B"
+    ],
+    "name": [
+      "晴山",
+      "暮山紫",
+      "监德",
+      "苍苍",
+      "群青",
+      "青雀头黛"
+    ],
+    "palette_name": [
+      "碧海晴空"
+    ],
+    "palette_name_e": [
+      "ocean_sky"
+    ],
+    "description_cn": [
+      "从朦胧的雾霭蓝到深邃的午夜蓝，宛如海天相接的宁静渐变，展现清澈而沉稳的蓝色调。适用于科技品牌、商务设计、宁静主题和专业可靠的视觉表达。"
+    ],
+    "description_en": [
+      "A serene gradient from hazy mist blue to deep midnight blue, resembling the tranquil blend of ocean and sky, showcasing clear and steady blue tones. Ideal for tech brands, business designs, calm themes, and professional visual communication."
+    ],
+    "type": [
+      "sequential"
+    ],
+    "color_count": [
+      6
+    ],
+    "key": "seq18",
+    "index": 18
+  },
+  {
+    "hex": [
+      "#D4C9AA",
+      "#BFB99C",
+      "#A9A082",
+      "#92897B",
+      "#70695D",
+      "#585248"
+    ],
+    "name": [
+      "仙米",
+      "行香子",
+      "玄校",
+      "石莲褐",
+      "黑朱",
+      "墨黪"
+    ],
+    "palette_name": [
+      "素雅中性"
+    ],
+    "palette_name_e": [
+      "neutral_earth"
+    ],
+    "description_cn": [
+      "一组低调优雅的中性大地色系，从柔和的浅米灰到沉稳的深灰褐，呈现质朴而高级的质感。适用于极简设计、文艺风格、家居装饰和沉稳专业的品牌形象。"
+    ],
+    "description_en": [
+      "A subtle and elegant neutral earth-tone palette, ranging from soft light beige-gray to deep charcoal brown, presenting a rustic yet sophisticated texture. Perfect for minimalist designs, literary styles, home decor, and professional brand imagery."
+    ],
+    "type": [
+      "sequential"
+    ],
+    "color_count": [
+      6
+    ],
+    "key": "seq19",
+    "index": 19
+  },
+  {
+    "hex": [
+      "#ECD9C7",
+      "#DDBB99",
+      "#B49B7F",
+      "#99806C",
+      "#796860",
+      "#5A4B3B"
+    ],
+    "name": [
+      "弗肯红",
+      "如梦令",
+      "养生主",
+      "沉香",
+      "濯绛",
+      "苍艾"
+    ],
+    "palette_name": [
+      "暖调中性"
+    ],
+    "palette_name_e": [
+      "warm_neutral"
+    ],
+    "description_cn": [
+      "温暖柔和的中性色调，从浅米白到暗巧克力的自然过渡，营造舒适而稳重的氛围。适用于家居设计、服装搭配、自然主题和温馨舒适的品牌视觉。"
+    ],
+    "description_en": [
+      "A warm and soft neutral palette with a natural transition from light cream to dark chocolate, creating a comfortable and stable atmosphere. Ideal for home design, fashion coordination, natural themes, and warm, cozy brand visuals."
+    ],
+    "type": [
+      "sequential"
+    ],
+    "color_count": [
+      6
+    ],
+    "key": "seq20",
+    "index": 20
+  },
+  {
+    "hex": [
+      "#663D74",
+      "#7E527F",
+      "#A6559D",
+      "#CE93BF",
+      "#F5F2E9",
+      "#F2C867",
+      "#E5A84B",
+      "#D3A237",
+      "#9F6027"
+    ],
+    "name": [
+      "三公子",
+      "拂紫绵",
+      "紫蒲",
+      "丁香",
+      "凝脂",
+      "嫩鹅黄",
+      "黄河琉璃",
+      "鞠衣",
+      "黄流"
+    ],
+    "palette_name": [
+      "暮色鎏金"
+    ],
+    "palette_name_e": [
+      "twilight_gold"
+    ],
+    "description_cn": [
+      "从神秘紫色经由纯净米白过渡到温暖金色的渐变色调，捕捉日落时分天空与光影的浪漫交织。适用于奢华品牌、艺术创作、节日主题和梦幻视觉设计。"
+    ],
+    "description_en": [
+      "A gradient transitioning from mysterious purples through pure off-white to warm golds, capturing the romantic interplay of sky and light at sunset. Perfect for luxury branding, artistic creations, festive themes, and dreamy visual designs."
+    ],
+    "type": [
+      "diverging"
+    ],
+    "color_count": [
+      9
+    ],
+    "key": "div01",
+    "index": 21
+  },
+  {
+    "hex": [
+      "#D12920",
+      "#E60012",
+      "#EA5514",
+      "#F5F3F2",
+      "#EFEFEF",
+      "#A2D2E2",
+      "#5AA4AE",
+      "#003460"
+    ],
+    "name": [
+      "银朱",
+      "丹罽",
+      "黄丹",
+      "山矾",
+      "缟羽",
+      "云门",
+      "天水碧",
+      "帝释青"
+    ],
+    "palette_name": [
+      "炎青对映"
+    ],
+    "palette_name_e": [
+      "red_blue"
+    ],
+    "description_cn": [
+      "红橙系与青蓝系对比，中间以白灰过渡，动静结合。适合现代科技展示、红蓝对抗主题、图表配色。"
+    ],
+    "description_en": [
+      "A diverging palette of warm reds and cool blues with neutral center. Useful in tech, opposition themes, and infographics."
+    ],
+    "type": [
+      "diverging"
+    ],
+    "color_count": [
+      8
+    ],
+    "key": "div02",
+    "index": 22
+  },
+  {
+    "hex": [
+      "#B83570",
+      "#CB5C83",
+      "#DD7694",
+      "#F091A0",
+      "#D4D3CA",
+      "#80A492",
+      "#5DA39D",
+      "#3D8E86",
+      "#226B68"
+    ],
+    "name": [
+      "红踯躅",
+      "琅玕紫",
+      "苏梅",
+      "杨妃",
+      "明月珰",
+      "缥碧",
+      "二绿",
+      "铜青",
+      "䌦色"
+    ],
+    "palette_name": [
+      "花漾水韵"
+    ],
+    "palette_name_e": [
+      "bloom_aqua"
+    ],
+    "description_cn": [
+      "柔美的粉红色系与清新的蓝绿色系通过中性米灰自然衔接，形成如花朵绽放于水面的梦幻渐变。适用于女性品牌、春夏设计、清新主题和浪漫视觉表达。"
+    ],
+    "description_en": [
+      "A dreamy gradient where soft pinks and fresh aqua greens are seamlessly connected by a neutral gray-beige, resembling flowers blooming on water. Ideal for feminine branding, spring-summer designs, fresh themes, and romantic visual expressions."
+    ],
+    "type": [
+      "diverging"
+    ],
+    "color_count": [
+      9
+    ],
+    "key": "div03",
+    "index": 23
+  },
+  {
+    "hex": [
+      "#822327",
+      "#B93A26",
+      "#D24735",
+      "#F5F3F2",
+      "#FFEE6F",
+      "#ECD452",
+      "#B6A014"
+    ],
+    "name": [
+      "大繎",
+      "朱殷",
+      "鹤顶红",
+      "山矾",
+      "松花",
+      "缃叶",
+      "苍黄"
+    ],
+    "palette_name": [
+      "焰阳流金"
+    ],
+    "palette_name_e": [
+      "flame_gold"
+    ],
+    "description_cn": [
+      "由深红、朱红到亮黄的渐变配合柔和中性色，色彩热烈而富生命力。适合食品包装、节庆宣传、餐饮品牌设计。"
+    ],
+    "description_en": [
+      "A gradient from deep red to bright yellow with soft neutrals, evoking blazing sunlight and golden radiance. Perfect for food packaging, festive promotions, and restaurant branding."
+    ],
+    "type": [
+      "diverging"
+    ],
+    "color_count": [
+      7
+    ],
+    "key": "div04",
+    "index": 24
+  },
+  {
+    "hex": [
+      "#AB1D22",
+      "#C12C1F",
+      "#D24735",
+      "#E67762",
+      "#BEC2B3",
+      "#81A380",
+      "#698E6A",
+      "#4F794A",
+      "#2A6E3F"
+    ],
+    "name": [
+      "胭脂虫",
+      "珊瑚赫",
+      "鹤顶红",
+      "小红",
+      "冻缥",
+      "青楸",
+      "菉竹",
+      "芰荷",
+      "官绿"
+    ],
+    "palette_name": [
+      "焰色林光"
+    ],
+    "palette_name_e": [
+      "ember_forest"
+    ],
+    "description_cn": [
+      "炽热的红色系经由中性灰绿过渡到生机勃勃的绿色系，形成火焰与森林的强烈对比与自然融合。适用于动态数据可视化、自然能源主题、运动品牌和对比视觉设计。"
+    ],
+    "description_en": [
+      "A dynamic palette transitioning from fiery reds through neutral gray-green to vibrant greens, creating a striking contrast and natural blend of fire and forest. Perfect for dynamic data visualization, natural energy themes, sports brands, and contrasting visual designs."
+    ],
+    "type": [
+      "diverging"
+    ],
+    "color_count": [
+      9
+    ],
+    "key": "div05",
+    "index": 25
+  },
+  {
+    "hex": [
+      "#896D47",
+      "#AC9F8A",
+      "#C8B5B3",
+      "#F5F3F2",
+      "#EBEDDF",
+      "#BEC2BC",
+      "#86908A",
+      "#555F4D"
+    ],
+    "name": [
+      "吉金",
+      "佩玖",
+      "苍烟落照",
+      "山矾",
+      "吉量",
+      "溶溶月",
+      "蕉月",
+      "结绿"
+    ],
+    "palette_name": [
+      "烟翠古韵"
+    ],
+    "palette_name_e": [
+      "smoke_green"
+    ],
+    "description_cn": [
+      "棕绿与灰白调交织，层次内敛沉稳，仿佛古物表面的岁月痕迹；适用于文化创意、文博展览、茶饮品牌。"
+    ],
+    "description_en": [
+      "A blend of brown-green and gray-white tones, evoking antique patina and timelessness. Great for cultural products, museum exhibits, and tea branding."
+    ],
+    "type": [
+      "diverging"
+    ],
+    "color_count": [
+      8
+    ],
+    "key": "div06",
+    "index": 26
+  },
+  {
+    "hex": [
+      "#5F4321",
+      "#775039",
+      "#94784F",
+      "#EFEFEF",
+      "#ECB0C1",
+      "#DD7694",
+      "#A76283",
+      "#8A1874",
+      "#663D74"
+    ],
+    "name": [
+      "龙战",
+      "栗壳",
+      "大云",
+      "缟羽",
+      "水红",
+      "苏梅",
+      "紫茎屏风",
+      "赪紫",
+      "三公子"
+    ],
+    "palette_name": [
+      "樱紫幻梦"
+    ],
+    "palette_name_e": [
+      "cherry_dream"
+    ],
+    "description_cn": [
+      "由棕色到紫粉渐变，搭配柔白，营造梦幻浪漫氛围；适用于婚礼主题、化妆品包装及浪漫节日活动设计。"
+    ],
+    "description_en": [
+      "Brown to purple-pink gradient with soft white, creating a dreamy romantic vibe. Perfect for wedding themes, cosmetics packaging, and romantic event designs."
+    ],
+    "type": [
+      "diverging"
+    ],
+    "color_count": [
+      9
+    ],
+    "key": "div07",
+    "index": 27
+  },
+  {
+    "hex": [
+      "#EA5514",
+      "#ED6D3D",
+      "#F18F60",
+      "#F5B087",
+      "#EFEFEF",
+      "#6A8D52",
+      "#4C8045",
+      "#446A37",
+      "#2A6E3F"
+    ],
+    "name": [
+      "黄丹",
+      "苕荣",
+      "赪霞",
+      "骍刚",
+      "缟羽",
+      "石发",
+      "翠微",
+      "翠虬",
+      "官绿"
+    ],
+    "palette_name": [
+      "焰色森光"
+    ],
+    "palette_name_e": [
+      "fire_forest"
+    ],
+    "description_cn": [
+      "炽热的火焰色系通过纯白色过渡到宁静的森林绿色，形成强烈的冷暖对比，展现自然力量的碰撞与平衡。适用于能源主题、环保活动、运动品牌和对比视觉设计。"
+    ],
+    "description_en": [
+      "A striking contrast between fiery warm tones and serene forest greens, bridged by pure white, showcasing the collision and balance of natural forces. Perfect for energy themes, environmental campaigns, sports brands, and contrasting visual designs."
+    ],
+    "type": [
+      "diverging"
+    ],
+    "color_count": [
+      9
+    ],
+    "key": "div08",
+    "index": 28
+  },
+  {
+    "hex": [
+      "#AA8534",
+      "#B6A014",
+      "#D8DE8A",
+      "#EDF1BB",
+      "#ECEBC2",
+      "#A9BE7B",
+      "#68945C",
+      "#2A6E3F"
+    ],
+    "name": [
+      "老茯神",
+      "苍黄",
+      "绮钱",
+      "葱青",
+      "断肠",
+      "春辰",
+      "庭芜绿",
+      "官绿"
+    ],
+    "palette_name": [
+      "青翠田野"
+    ],
+    "palette_name_e": [
+      "field_green"
+    ],
+    "description_cn": [
+      "金黄与多层绿交织，色彩鲜活自然，宛如夏日田野；适合农业广告、生态旅游、健康食品包装。"
+    ],
+    "description_en": [
+      "Golden and layered greens intertwine, vibrant like summer fields. Suitable for agricultural ads, eco-tourism, and healthy food packaging."
+    ],
+    "type": [
+      "diverging"
+    ],
+    "color_count": [
+      8
+    ],
+    "key": "div09",
+    "index": 29
+  },
+  {
+    "hex": [
+      "#9E2A22",
+      "#B13B2E",
+      "#C35C5D",
+      "#D77F66",
+      "#D4DDE1",
+      "#5AA4AE",
+      "#108B96",
+      "#006D87",
+      "#13393E"
+    ],
+    "name": [
+      "綪茷",
+      "石榴裙",
+      "牙绯",
+      "琼琚",
+      "素采",
+      "天水碧",
+      "法翠",
+      "软翠",
+      "螺子黛"
+    ],
+    "palette_name": [
+      "漠海奇缘"
+    ],
+    "palette_name_e": [
+      "desert_ocean"
+    ],
+    "description_cn": [
+      "炽热沙漠色调与清凉海洋色调的戏剧性碰撞，通过浅灰蓝自然过渡，展现自然元素的对比与和谐。适用于探险主题、旅游品牌、地理数据和创意视觉设计。"
+    ],
+    "description_en": [
+      "A dramatic contrast between hot desert tones and cool ocean blues, naturally bridged by a light gray-blue, showcasing the harmony of opposing natural elements. Ideal for adventure themes, travel brands, geographic data, and creative visual designs."
+    ],
+    "type": [
+      "diverging"
+    ],
+    "color_count": [
+      9
+    ],
+    "key": "div10",
+    "index": 30
+  },
+  {
+    "hex": [
+      "#BF9C46",
+      "#D3A237",
+      "#E5A84B",
+      "#F2C867",
+      "#B2B6B6",
+      "#2E59A7",
+      "#06436F",
+      "#003460",
+      "#12264F"
+    ],
+    "name": [
+      "秋香",
+      "鞠衣",
+      "黄河琉璃",
+      "嫩鹅黄",
+      "月魄",
+      "群青",
+      "蓝采和",
+      "帝释青",
+      "骐驎"
+    ],
+    "palette_name": [
+      "金渊碧海"
+    ],
+    "palette_name_e": [
+      "golden_abyss"
+    ],
+    "description_cn": [
+      "璀璨的金色系与深邃的蓝色系通过中性银灰蓝完美衔接，形成奢华与神秘的视觉对比。适用于金融品牌、高端产品、科技视觉和深邃主题设计。"
+    ],
+    "description_en": [
+      "A luxurious contrast between radiant golds and deep blues, seamlessly connected by a neutral silver-gray blue, creating an opulent and mysterious visual effect. Perfect for financial branding, premium products, tech visuals, and profound theme designs."
+    ],
+    "type": [
+      "diverging"
+    ],
+    "color_count": [
+      9
+    ],
+    "key": "div11",
+    "index": 31
+  },
+  {
+    "hex": [
+      "#4F6F46",
+      "#779649",
+      "#C0D695",
+      "#EDF1BB",
+      "#EAE5E3",
+      "#F0C2A2",
+      "#D9883D",
+      "#D24735",
+      "#822327"
+    ],
+    "name": [
+      "青青",
+      "碧山",
+      "欧碧",
+      "葱青",
+      "玉頩",
+      "扶光",
+      "红友",
+      "鹤顶红",
+      "大繎"
+    ],
+    "palette_name": [
+      "林火秋晖"
+    ],
+    "palette_name_e": [
+      "forest_flame"
+    ],
+    "description_cn": [
+      "绿色到暖红的过渡充满张力，象征生命与热烈；适合户外运动、生态产品、节日装饰设计。"
+    ],
+    "description_en": [
+      "A transition from green to warm red full of tension, symbolizing life and passion. Perfect for outdoor sports, eco-products, and festive décor."
+    ],
+    "type": [
+      "diverging"
+    ],
+    "color_count": [
+      9
+    ],
+    "key": "div12",
+    "index": 32
+  },
+  {
+    "hex": [
+      "#8B7042",
+      "#A58A5F",
+      "#C6A268",
+      "#E1C199",
+      "#D4C9AA",
+      "#92905D",
+      "#6C8650",
+      "#4F794A",
+      "#2A6E3F"
+    ],
+    "name": [
+      "流黄",
+      "蒸栗",
+      "茧色",
+      "赤璋",
+      "仙米",
+      "青圭",
+      "葱倩",
+      "芰荷",
+      "官绿"
+    ],
+    "palette_name": [
+      "大地回春"
+    ],
+    "palette_name_e": [
+      "earth_renewal"
+    ],
+    "description_cn": [
+      "温暖的大地色系与生机勃勃的绿色系自然融合，呈现从秋收到春生的色彩过渡，充满自然韵律与生命力。适用于农业品牌、环保设计、有机产品和自然主题视觉。"
+    ],
+    "description_en": [
+      "A natural fusion of warm earth tones and vibrant greens, depicting a color transition from autumn harvest to spring growth, full of natural rhythm and vitality. Ideal for agricultural brands, eco-designs, organic products, and nature-themed visuals."
+    ],
+    "type": [
+      "sequential"
+    ],
+    "color_count": [
+      9
+    ],
+    "key": "div13",
+    "index": 33
+  },
+  {
+    "hex": [
+      "#A72126",
+      "#C8161D",
+      "#E60012",
+      "#F29A76",
+      "#EFEFEF",
+      "#80A492",
+      "#5DA39D",
+      "#3D8E86",
+      "#226B68"
+    ],
+    "name": [
+      "水华朱",
+      "丹雘",
+      "丹罽",
+      "朱颜酡",
+      "缟羽",
+      "缥碧",
+      "二绿",
+      "铜青",
+      "䌦色"
+    ],
+    "palette_name": [
+      "冰火交响"
+    ],
+    "palette_name_e": [
+      "fire_ice"
+    ],
+    "description_cn": [
+      "强烈的冷暖对比色板，从炽热的红色系经由纯净白色过渡到冷静的蓝绿色系，形成冰与火的视觉交响。适用于数据可视化、对比主题、现代设计和动态视觉表现。"
+    ],
+    "description_en": [
+      "A strong warm-cool contrasting palette, transitioning from fiery reds through pure white to calm blue-greens, creating a visual symphony of fire and ice. Ideal for data visualization, contrast themes, modern design, and dynamic visual expressions."
+    ],
+    "type": [
+      "diverging"
+    ],
+    "color_count": [
+      9
+    ],
+    "key": "div14",
+    "index": 34
+  },
+  {
+    "hex": [
+      "#7E527F",
+      "#A6559D",
+      "#CE93BF",
+      "#F0CFE3",
+      "#F5F2E9",
+      "#CDD171",
+      "#9EBC19",
+      "#68945C",
+      "#446A37"
+    ],
+    "name": [
+      "拂紫绵",
+      "紫蒲",
+      "丁香",
+      "退红",
+      "凝脂",
+      "翠樽",
+      "人籁",
+      "庭芜绿",
+      "翠虬"
+    ],
+    "palette_name": [
+      "幻境花园"
+    ],
+    "palette_name_e": [
+      "magic_garden"
+    ],
+    "description_cn": [
+      "梦幻的紫色系经由纯净米白过渡到活力的黄绿色系，营造出神秘而生机盎然的奇幻花园氛围。适用于奇幻主题、创意设计、女性品牌和春季视觉表达。"
+    ],
+    "description_en": [
+      "A magical palette transitioning from dreamy purples through pure off-white to vibrant yellow-greens, creating an enchanting and lively fantasy garden atmosphere. Perfect for fantasy themes, creative designs, feminine branding, and spring visual expressions."
+    ],
+    "type": [
+      "diverging"
+    ],
+    "color_count": [
+      9
+    ],
+    "key": "div15",
+    "index": 35
+  },
+  {
+    "hex": [
+      "#F29A76",
+      "#F3A694",
+      "#F5B087",
+      "#F8C6B5",
+      "#BEC2B3",
+      "#92905D",
+      "#6C8650",
+      "#4F794A",
+      "#2A6E3F"
+    ],
+    "name": [
+      "朱颜酡",
+      "海天霞",
+      "骍刚",
+      "十样锦",
+      "冻缥",
+      "青圭",
+      "葱倩",
+      "芰荷",
+      "官绿"
+    ],
+    "palette_name": [
+      "晨光牧野"
+    ],
+    "palette_name_e": [
+      "sunrise_meadow"
+    ],
+    "description_cn": [
+      "从温暖的晨光色调经由中性灰绿过渡到清新的草地绿色，宛如日出时分阳光洒满原野的自然景象。适用于健康品牌、户外活动、自然主题和清新视觉设计。"
+    ],
+    "description_en": [
+      "A natural transition from warm sunrise tones through neutral gray-green to fresh meadow greens, resembling sunlight spreading across fields at dawn. Ideal for health brands, outdoor activities, nature themes, and fresh visual designs."
+    ],
+    "type": [
+      "diverging"
+    ],
+    "color_count": [
+      9
+    ],
+    "key": "div16",
+    "index": 36
+  },
+  {
+    "hex": [
+      "#003460",
+      "#2E59A7",
+      "#6E9BC5",
+      "#98B6C2",
+      "#EFEFEF",
+      "#B49273",
+      "#94784F",
+      "#775039",
+      "#5F4321"
+    ],
+    "name": [
+      "帝释青",
+      "群青",
+      "挼蓝",
+      "白青",
+      "缟羽",
+      "黄埃",
+      "大云",
+      "栗壳",
+      "龙战"
+    ],
+    "palette_name": [
+      "海天沙影"
+    ],
+    "palette_name_e": [
+      "sea_sand"
+    ],
+    "description_cn": [
+      "海蓝到沙褐的渐变结合白灰中性，充满旅行探索氛围；适合海洋项目、探险广告、旅行类视觉设计。"
+    ],
+    "description_en": [
+      "Ocean blue to sandy brown gradient with neutral white-gray, evoking travel and exploration. Perfect for marine projects, adventure ads, and travel visuals."
+    ],
+    "type": [
+      "diverging"
+    ],
+    "color_count": [
+      9
+    ],
+    "key": "div17",
+    "index": 37
+  },
+  {
+    "hex": [
+      "#13393E",
+      "#354E6B",
+      "#6E9BC5",
+      "#98B6C2",
+      "#EAE5E3",
+      "#DFE0D9",
+      "#F091A0",
+      "#DC6B82",
+      "#C35C5D",
+      "#7C191E"
+    ],
+    "name": [
+      "螺子黛",
+      "青雀头黛",
+      "挼蓝",
+      "白青",
+      "玉頩",
+      "二目鱼",
+      "杨妃",
+      "长春",
+      "唇脂",
+      "顺圣"
+    ],
+    "palette_name": [
+      "黛海玫瑰"
+    ],
+    "palette_name_e": [
+      "ocean_rose"
+    ],
+    "description_cn": [
+      "深海蓝渐变至玫瑰红，冷暖交织优雅浪漫；适用于婚礼品牌、浪漫电影海报、珠宝广告。"
+    ],
+    "description_en": [
+      "Deep ocean blue blending into rose red, a cool-warm elegant harmony. Ideal for wedding brands, romantic movie posters, and jewelry ads."
+    ],
+    "type": [
+      "diverging"
+    ],
+    "color_count": [
+      10
+    ],
+    "key": "div18",
+    "index": 38
+  },
+  {
+    "hex": [
+      "#003460",
+      "#2E59A7",
+      "#6E9BC5",
+      "#AED0EE",
+      "#EFEFEF",
+      "#F5F3F2",
+      "#F0C2A2",
+      "#DB9C5E",
+      "#D9883D",
+      "#CC5D20"
+    ],
+    "name": [
+      "帝释青",
+      "群青",
+      "挼蓝",
+      "碧落",
+      "缟羽",
+      "山矾",
+      "扶光",
+      "椒房",
+      "红友",
+      "光明砂"
+    ],
+    "palette_name": [
+      "碧空炽阳"
+    ],
+    "palette_name_e": [
+      "sky_flare"
+    ],
+    "description_cn": [
+      "天蓝至橙黄过渡，如烈日照耀碧空；适合航海、航空、夏日活动视觉宣传。"
+    ],
+    "description_en": [
+      "Sky blue to orange-yellow transition, like sunlight blazing in the sky. Great for marine, aviation, and summer event visuals."
+    ],
+    "type": [
+      "diverging"
+    ],
+    "color_count": [
+      10
+    ],
+    "key": "div19",
+    "index": 39
+  },
+  {
+    "hex": [
+      "#EA5514",
+      "#ED6D3D",
+      "#F18F60",
+      "#F5B087",
+      "#D3CCD6",
+      "#9B8EA9",
+      "#7E527F",
+      "#6C216D",
+      "#422256"
+    ],
+    "name": [
+      "黄丹",
+      "苕荣",
+      "赪霞",
+      "骍刚",
+      "香炉紫烟",
+      "紫菂",
+      "拂紫绵",
+      "齐紫",
+      "凝夜紫"
+    ],
+    "palette_name": [
+      "橙紫对韵"
+    ],
+    "palette_name_e": [
+      "orange_purple_duet"
+    ],
+    "description_cn": [
+      "大胆的暖橙与冷紫色系对比组合，中间以中性淡紫灰过渡，形成强烈的视觉张力与艺术美感。适用于创意设计、艺术海报、时尚潮流和年轻化品牌视觉。"
+    ],
+    "description_en": [
+      "A bold contrasting palette combining warm oranges and cool purples, bridged by a neutral lavender-gray, creating strong visual tension and artistic beauty. Perfect for creative designs, art posters, fashion trends, and youth-oriented brand visuals."
+    ],
+    "type": [
+      "diverging"
+    ],
+    "color_count": [
+      9
+    ],
+    "key": "div20",
+    "index": 40
+  },
+  {
+    "hex": [
+      "#E60012",
+      "#108B96",
+      "#84A729",
+      "#AA8E59",
+      "#A6559D",
+      "#D9883D",
+      "#454659"
+    ],
+    "name": [
+      "丹罽",
+      "法翠",
+      "水龙吟",
+      "巨吕",
+      "紫蒲",
+      "红友",
+      "䒌靘"
+    ],
+    "palette_name": [
+      "炽彩律动"
+    ],
+    "palette_name_e": [
+      "vivid_move"
+    ],
+    "description_cn": [
+      "高饱和色彩冲击力强，节奏感鲜明；适合运动品牌、广告宣传、数字媒体。"
+    ],
+    "description_en": [
+      "Highly saturated colors with strong rhythm, full of impact. Great for sports brands, advertising, and digital media."
+    ],
+    "type": [
+      "qualitative"
+    ],
+    "color_count": [
+      7
+    ],
+    "key": "qual01",
+    "index": 41
+  },
+  {
+    "hex": [
+      "#C8161D",
+      "#19325F",
+      "#2A6E3F",
+      "#F7EEAD",
+      "#7A7B78",
+      "#422517"
+    ],
+    "name": [
+      "丹雘",
+      "佛头青",
+      "官绿",
+      "女贞黄",
+      "雷雨垂",
+      "青骊"
+    ],
+    "palette_name": [
+      "沉稳古韵"
+    ],
+    "palette_name_e": [
+      "deep_classic"
+    ],
+    "description_cn": [
+      "深红与蓝绿组合，厚重沉稳如古韵；适合文化活动、博物馆展览、古典品牌。"
+    ],
+    "description_en": [
+      "Deep red with blue-green, heavy and classic. Ideal for cultural events, museums, and traditional branding."
+    ],
+    "type": [
+      "qualitative"
+    ],
+    "color_count": [
+      6
+    ],
+    "key": "qual02",
+    "index": 42
+  },
+  {
+    "hex": [
+      "#E60012",
+      "#FFEF6F",
+      "#4C8045",
+      "#6E9BC5",
+      "#B83570",
+      "#F5B087"
+    ],
+    "name": [
+      "丹罽",
+      "松花",
+      "翠微",
+      "挼蓝",
+      "红踯躅",
+      "骍刚"
+    ],
+    "palette_name": [
+      "炫彩盛夏"
+    ],
+    "palette_name_e": [
+      "bright_summer"
+    ],
+    "description_cn": [
+      "鲜明的红黄绿蓝组合，充满夏日热情；适合饮品、节庆、娱乐宣传。"
+    ],
+    "description_en": [
+      "Bright red, yellow, green, and blue, full of summer energy. Perfect for beverages, festivals, and entertainment campaigns."
+    ],
+    "type": [
+      "qualitative"
+    ],
+    "color_count": [
+      6
+    ],
+    "key": "qual03",
+    "index": 43
+  },
+  {
+    "hex": [
+      "#C8161D",
+      "#003460",
+      "#B6A014",
+      "#779649",
+      "#A6559D",
+      "#FEDC5E",
+      "#94784F",
+      "#6E9BC5"
+    ],
+    "name": [
+      "丹雘",
+      "帝释青",
+      "苍黄",
+      "碧山",
+      "紫蒲",
+      "黄栗留",
+      "大云",
+      "挼蓝"
+    ],
+    "palette_name": [
+      "烈彩纷呈"
+    ],
+    "palette_name_e": [
+      "bold_mix"
+    ],
+    "description_cn": [
+      "强烈对比色构成动感组合；适合年轻潮流品牌、数字艺术、动态广告。"
+    ],
+    "description_en": [
+      "Strong contrasting colors create a dynamic mix. Ideal for youth brands, digital art, and dynamic ads."
+    ],
+    "type": [
+      "qualitative"
+    ],
+    "color_count": [
+      8
+    ],
+    "key": "qual04",
+    "index": 44
+  },
+  {
+    "hex": [
+      "#C12C1F",
+      "#FFF799",
+      "#A6559D",
+      "#F0C2A2",
+      "#6E9BC5",
+      "#D6BC46"
+    ],
+    "name": [
+      "珊瑚赫",
+      "黄白游",
+      "紫蒲",
+      "扶光",
+      "挼蓝",
+      "姚黄"
+    ],
+    "palette_name": [
+      "柔彩暖夏"
+    ],
+    "palette_name_e": [
+      "soft_summer"
+    ],
+    "description_cn": [
+      "柔和暖色配蓝紫点缀，温馨浪漫；适合婚礼主题、甜品包装、家居设计。"
+    ],
+    "description_en": [
+      "Soft warm tones with blue-violet accents, cozy and romantic. Perfect for weddings, desserts, and home décor."
+    ],
+    "type": [
+      "qualitative"
+    ],
+    "color_count": [
+      6
+    ],
+    "key": "qual05",
+    "index": 45
+  },
+  {
+    "hex": [
+      "#9AA7B1",
+      "#8F1D22",
+      "#B4884D",
+      "#343041",
+      "#EBEDDF"
+    ],
+    "name": [
+      "青鸾",
+      "朱樱",
+      "雌黄",
+      "璆琳",
+      "吉量"
+    ],
+    "palette_name": [
+      "冷暖交融"
+    ],
+    "palette_name_e": [
+      "cool_warm"
+    ],
+    "description_cn": [
+      "冷暖色交织，平衡自然；适合科技产品、时尚服饰、现代艺术。"
+    ],
+    "description_en": [
+      "Cool and warm colors blend naturally. Ideal for tech products, fashion, and modern art."
+    ],
+    "type": [
+      "qualitative"
+    ],
+    "color_count": [
+      5
+    ],
+    "key": "qual06",
+    "index": 46
+  },
+  {
+    "hex": [
+      "#F9D3E3",
+      "#68945C",
+      "#D5B45C",
+      "#AED0EE"
+    ],
+    "name": [
+      "盈盈",
+      "庭芜绿",
+      "太一余粮",
+      "碧落"
+    ],
+    "palette_name": [
+      "柔绿粉蓝"
+    ],
+    "palette_name_e": [
+      "soft_pastel"
+    ],
+    "description_cn": [
+      "粉绿与浅蓝柔和相融，温柔浪漫；适合春夏服饰、轻奢品牌、化妆品包装。"
+    ],
+    "description_en": [
+      "Soft pink-green blending with light blue, gentle and romantic. Perfect for spring-summer fashion, luxury brands, and cosmetics."
+    ],
+    "type": [
+      "qualitative"
+    ],
+    "color_count": [
+      4
+    ],
+    "key": "qual07",
+    "index": 47
+  },
+  {
+    "hex": [
+      "#F091A0",
+      "#FEDC5E",
+      "#68945C",
+      "#6E9BC5",
+      "#BBA1CB",
+      "#F5B087"
+    ],
+    "name": [
+      "杨妃",
+      "黄栗留",
+      "庭芜绿",
+      "挼蓝",
+      "紫薄汗",
+      "骍刚"
+    ],
+    "palette_name": [
+      "花园晨曲"
+    ],
+    "palette_name_e": [
+      "garden_song"
+    ],
+    "description_cn": [
+      "花园般的粉嫩色系配以蓝绿点缀，清新灵动；适合花艺品牌、春季活动、婚礼设计。"
+    ],
+    "description_en": [
+      "Garden-like soft pinks with blue-green accents, fresh and lively. Great for floral brands, spring events, and wedding designs."
+    ],
+    "type": [
+      "qualitative"
+    ],
+    "color_count": [
+      6
+    ],
+    "key": "qual08",
+    "index": 48
+  },
+  {
+    "hex": [
+      "#FFF799",
+      "#E5A84B",
+      "#BA5140",
+      "#6B5458",
+      "#12264F",
+      "#EBEEE8"
+    ],
+    "name": [
+      "黄白游",
+      "黄河琉璃",
+      "纁黄",
+      "玄天",
+      "骐驎",
+      "皦玉"
+    ],
+    "palette_name": [
+      "金夜之境"
+    ],
+    "palette_name_e": [
+      "gold_night"
+    ],
+    "description_cn": [
+      "金色与夜蓝组合，奢华神秘；适合高端活动、舞台灯光、品牌形象设计。"
+    ],
+    "description_en": [
+      "Gold with night blue, luxurious and mysterious. Great for premium events, stage lighting, and branding."
+    ],
+    "type": [
+      "qualitative"
+    ],
+    "color_count": [
+      6
+    ],
+    "key": "qual09",
+    "index": 49
+  },
+  {
+    "hex": [
+      "#EDF1BB",
+      "#D4E5EF",
+      "#9BB496",
+      "#F6BEC8",
+      "#D6C560",
+      "#6C8650",
+      "#F29A76"
+    ],
+    "name": [
+      "葱青",
+      "月白",
+      "渌波",
+      "桃夭",
+      "姜黄",
+      "葱倩",
+      "朱颜酡"
+    ],
+    "palette_name": [
+      "春日花语"
+    ],
+    "palette_name_e": [
+      "spring_blossom"
+    ],
+    "description_cn": [
+      "清新绿蓝搭配柔粉黄，宛如春花烂漫；适合婚礼布置、化妆品包装、春日推广。"
+    ],
+    "description_en": [
+      "Fresh green-blue with soft pink-yellow, like blooming spring. Ideal for weddings, cosmetics, and spring promotions."
+    ],
+    "type": [
+      "qualitative"
+    ],
+    "color_count": [
+      7
+    ],
+    "key": "qual10",
+    "index": 50
+  },
+  {
+    "hex": [
+      "#E3EB98",
+      "#D4E5EF",
+      "#FEDC5E",
+      "#6C8650",
+      "#E67762",
+      "#A2D2E2",
+      "#BA79B1"
+    ],
+    "name": [
+      "少艾",
+      "月白",
+      "黄栗留",
+      "葱倩",
+      "小红",
+      "云门",
+      "木槿"
+    ],
+    "palette_name": [
+      "晨露花园"
+    ],
+    "palette_name_e": [
+      "dew_garden"
+    ],
+    "description_cn": [
+      "绿黄与粉蓝紫搭配，轻盈清爽；适合花园主题、自然产品、春夏广告。"
+    ],
+    "description_en": [
+      "Green-yellow with pastel blue and violet, light and fresh. Perfect for garden themes, natural products, and summer ads."
+    ],
+    "type": [
+      "qualitative"
+    ],
+    "color_count": [
+      7
+    ],
+    "key": "qual11",
+    "index": 51
+  },
+  {
+    "hex": [
+      "#106898",
+      "#FEDC5E",
+      "#C12C1F",
+      "#6B798E",
+      "#D6C560",
+      "#A67EB7",
+      "#9BB496"
+    ],
+    "name": [
+      "柔蓝",
+      "黄栗留",
+      "珊瑚赫",
+      "菘蓝",
+      "姜黄",
+      "茈藐",
+      "渌波"
+    ],
+    "palette_name": [
+      "明丽初夏"
+    ],
+    "palette_name_e": [
+      "bright_summer"
+    ],
+    "description_cn": [
+      "蓝黄红紫交织明快活泼；适合夏日宣传、饮品广告、年轻潮流设计。"
+    ],
+    "description_en": [
+      "Blue, yellow, red, and purple lively blend. Great for summer promotions, beverage ads, and youth designs."
+    ],
+    "type": [
+      "qualitative"
+    ],
+    "color_count": [
+      7
+    ],
+    "key": "qual12",
+    "index": 52
+  },
+  {
+    "hex": [
+      "#F5B087",
+      "#003460",
+      "#C3D94E",
+      "#BA79B1",
+      "#446A37",
+      "#E94829",
+      "#88ABDA",
+      "#D6C560"
+    ],
+    "name": [
+      "骍刚",
+      "帝释青",
+      "青粲",
+      "木槿",
+      "翠虬",
+      "檎丹",
+      "窃蓝",
+      "姜黄"
+    ],
+    "palette_name": [
+      "炫动花火"
+    ],
+    "palette_name_e": [
+      "fire_bloom"
+    ],
+    "description_cn": [
+      "多彩跳跃色调，似绽放花火；适合音乐节、青年活动、创意广告。"
+    ],
+    "description_en": [
+      "Vivid popping colors, like blooming fireworks. Perfect for music festivals, youth events, and creative ads."
+    ],
+    "type": [
+      "qualitative"
+    ],
+    "color_count": [
+      8
+    ],
+    "key": "qual13",
+    "index": 53
+  },
+  {
+    "hex": [
+      "#9BB496",
+      "#D4E5EF",
+      "#FEDC5E",
+      "#E67762",
+      "#C9CFC1",
+      "#8BA3C7",
+      "#C0D695"
+    ],
+    "name": [
+      "渌波",
+      "月白",
+      "黄栗留",
+      "小红",
+      "余白",
+      "东方既白",
+      "欧碧"
+    ],
+    "palette_name": [
+      "晨光和风"
+    ],
+    "palette_name_e": [
+      "morning_breeze"
+    ],
+    "description_cn": [
+      "柔和绿蓝黄与粉红交织，温暖轻盈；适合清新产品、花艺品牌、生活方式设计。"
+    ],
+    "description_en": [
+      "Soft green-blue-yellow with pink, warm and airy. Great for fresh products, floral brands, and lifestyle design."
+    ],
+    "type": [
+      "qualitative"
+    ],
+    "color_count": [
+      7
+    ],
+    "key": "qual14",
+    "index": 54
+  },
+  {
+    "hex": [
+      "#EDF1BB",
+      "#779649",
+      "#D23918",
+      "#A9BE7B",
+      "#F091A0",
+      "#4F6F46",
+      "#9B8EA9",
+      "#B6A014"
+    ],
+    "name": [
+      "葱青",
+      "碧山",
+      "洛神珠",
+      "春辰",
+      "杨妃",
+      "青青",
+      "紫菂",
+      "苍黄"
+    ],
+    "palette_name": [
+      "花园晨曦"
+    ],
+    "palette_name_e": [
+      "garden_dawn"
+    ],
+    "description_cn": [
+      "绿粉与橙红点缀，清新而浪漫；适合花园主题、节庆活动、女性品牌。"
+    ],
+    "description_en": [
+      "Green with pink and orange-red accents, fresh and romantic. Ideal for garden themes, festivals, and women’s brands."
+    ],
+    "type": [
+      "qualitative"
+    ],
+    "color_count": [
+      8
+    ],
+    "key": "qual15",
+    "index": 55
+  },
+  {
+    "hex": [
+      "#BD8253",
+      "#D2A36C",
+      "#A7AAA1",
+      "#6CA8AF",
+      "#903754",
+      "#C4B798",
+      "#775039"
+    ],
+    "name": [
+      "露褐",
+      "芸黄",
+      "不皂",
+      "正青",
+      "魏紫",
+      "黄粱",
+      "栗壳"
+    ],
+    "palette_name": [
+      "秋暮深调"
+    ],
+    "palette_name_e": [
+      "autumn_deep"
+    ],
+    "description_cn": [
+      "褐黄与深紫青色混合，厚重秋意；适合咖啡馆、复古家居、秋季产品。"
+    ],
+    "description_en": [
+      "Brown-yellow with deep purple and teal, full of autumn mood. Perfect for cafés, vintage interiors, and autumn products."
+    ],
+    "type": [
+      "qualitative"
+    ],
+    "color_count": [
+      7
+    ],
+    "key": "qual16",
+    "index": 56
+  },
+  {
+    "hex": [
+      "#B2BFC3",
+      "#5D8351",
+      "#106898",
+      "#9E4E56",
+      "#AA8E59",
+      "#9C8D9B",
+      "#68361A"
+    ],
+    "name": [
+      "逍遥游",
+      "漆姑",
+      "柔蓝",
+      "紫矿",
+      "巨吕",
+      "银褐",
+      "枣褐"
+    ],
+    "palette_name": [
+      "静谧行旅"
+    ],
+    "palette_name_e": [
+      "calm_journey"
+    ],
+    "description_cn": [
+      "灰蓝与绿色、酒红相互融合，沉静悠远；适合旅行主题、户外品牌、复古海报。"
+    ],
+    "description_en": [
+      "Gray-blue with green and burgundy, calm and distant. Ideal for travel themes, outdoor brands, and vintage posters."
+    ],
+    "type": [
+      "qualitative"
+    ],
+    "color_count": [
+      7
+    ],
+    "key": "qual17",
+    "index": 57
+  },
+  {
+    "hex": [
+      "#E0E0D0",
+      "#A8BF8F",
+      "#6F94CD",
+      "#7C191E",
+      "#6C216D",
+      "#7A7B78"
+    ],
+    "name": [
+      "韶粉",
+      "苍葭",
+      "监德",
+      "顺圣",
+      "齐紫",
+      "雷雨垂"
+    ],
+    "palette_name": [
+      "云霞远影"
+    ],
+    "palette_name_e": [
+      "cloud_haze"
+    ],
+    "description_cn": [
+      "浅灰绿与蓝紫点缀深红，层次丰富；适合文艺设计、创意广告、影视视觉。"
+    ],
+    "description_en": [
+      "Light gray-green with blue-purple and deep red accents, layered and rich. Great for artistic design, creative ads, and film visuals."
+    ],
+    "type": [
+      "qualitative"
+    ],
+    "color_count": [
+      6
+    ],
+    "key": "qual18",
+    "index": 58
+  },
+  {
+    "hex": [
+      "#3271AE",
+      "#C0D695",
+      "#E60012",
+      "#FEDC5E",
+      "#A6559D",
+      "#8BA3C7"
+    ],
+    "name": [
+      "青冥",
+      "欧碧",
+      "丹罽",
+      "黄栗留",
+      "紫蒲",
+      "东方既白"
+    ],
+    "palette_name": [
+      "炫彩远空"
+    ],
+    "palette_name_e": [
+      "bright_sky"
+    ],
+    "description_cn": [
+      "蓝绿与红黄紫多彩组合，视觉醒目；适合科技展会、时尚活动、动态广告。"
+    ],
+    "description_en": [
+      "Blue-green with red, yellow, and purple, visually striking. Perfect for tech expos, fashion events, and dynamic ads."
+    ],
+    "type": [
+      "qualitative"
+    ],
+    "color_count": [
+      6
+    ],
+    "key": "qual19",
+    "index": 59
+  },
+  {
+    "hex": [
+      "#12264F",
+      "#B6A014",
+      "#70695D",
+      "#C12C1F",
+      "#6B798E",
+      "#A88787"
+    ],
+    "name": [
+      "骐驎",
+      "苍黄",
+      "黑朱",
+      "珊瑚赫",
+      "菘蓝",
+      "藕丝褐"
+    ],
+    "palette_name": [
+      "夜金深影"
+    ],
+    "palette_name_e": [
+      "night_gold"
+    ],
+    "description_cn": [
+      "夜蓝与金黄褐色交融，厚重典雅；适合古典风品牌、奢侈广告、酒类包装。"
+    ],
+    "description_en": [
+      "Night blue with golden brown, heavy and elegant. Great for classical brands, luxury ads, and liquor packaging."
+    ],
+    "type": [
+      "qualitative"
+    ],
+    "color_count": [
+      6
+    ],
+    "key": "qual20",
+    "index": 60
+  }
+]

@@ -14,6 +14,44 @@
 
 <!-- badges: end -->
 
+## Python / matplotlib Port
+
+This repository is being migrated to a Python + matplotlib package with:
+
+- 384 traditional Chinese colors
+- 60 built-in palettes
+- `ctc_palette()` for built-in and custom palettes
+- 10 automatic palette generators
+- matplotlib colormap, color cycle, theme, and preview helpers
+
+
+### Quick Start
+
+```python
+from chinacolor import list_colors, list_palettes, ctc_palette, to_colormap, plot_palette
+
+colors = list_colors()
+palettes = list_palettes()
+
+seq01 = ctc_palette(type="built_in", palette_name="seq01", n=6)
+cmap = to_colormap(seq01)
+
+fig, ax = plot_palette("seq01")
+```
+
+### R to Python Migration
+
+| R / ggplot | Python / matplotlib |
+|---|---|
+| `list_colors()` | `list_colors()` |
+| `list_palettes()` | `list_palettes()` |
+| `ctc_palette()` | `ctc_palette()` |
+| `plot_palette()` | `plot_palette()` |
+| `plot_palettes()` | `plot_palettes()` |
+| `scale_fill_ctc_c()` | `to_colormap()` |
+| `scale_colour_ctc_d()` | `to_colormap()` |
+| `theme_ctc_ink()` | `apply_theme("ink")` |
+
 
 ## ✨ Latest Updates
 

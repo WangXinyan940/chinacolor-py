@@ -14,6 +14,43 @@
 
 <!-- badges: end -->
 
+## Python / matplotlib 版本
+
+当前仓库已经开始迁移为 Python + matplotlib 版本，核心能力包括：
+
+- 384 种中国传统色目录
+- 60 组内置调色板
+- `ctc_palette()` 自定义调色板接口
+- 10 个自动配色函数
+- matplotlib colormap、颜色循环、主题与预览函数
+
+### 快速开始
+
+```python
+from chinacolor import list_colors, list_palettes, ctc_palette, to_colormap, plot_palette
+
+colors = list_colors()
+palettes = list_palettes()
+
+seq01 = ctc_palette(type="built_in", palette_name="seq01", n=6)
+cmap = to_colormap(seq01)
+
+fig, ax = plot_palette("seq01")
+```
+
+### R 到 Python 迁移
+
+| R / ggplot | Python / matplotlib |
+|---|---|
+| `list_colors()` | `list_colors()` |
+| `list_palettes()` | `list_palettes()` |
+| `ctc_palette()` | `ctc_palette()` |
+| `plot_palette()` | `plot_palette()` |
+| `plot_palettes()` | `plot_palettes()` |
+| `scale_fill_ctc_c()` | `to_colormap()` |
+| `scale_colour_ctc_d()` | `to_colormap()` |
+| `theme_ctc_ink()` | `apply_theme("ink")` |
+
 ------------------------------------------------------------------------
 
 ## ✨ 最新更新
