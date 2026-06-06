@@ -13,7 +13,7 @@ from .auto import (
 from .catalog import get_color, get_palette_record, list_colors, list_palettes
 from .mpl import plot_color_grid, plot_palette, plot_palettes, to_color_cycle, to_colormap, to_listed_colormap
 from .palettes import create_color_pick, ctc_palette
-from .themes import apply_theme, get_theme, use_theme
+from .themes import apply_theme, get_theme, setup_chinese_font, use_theme
 
 __all__ = [
     "analogous_palette",
@@ -35,6 +35,7 @@ __all__ = [
     "plot_color_grid",
     "plot_palette",
     "plot_palettes",
+    "setup_chinese_font",
     "split_complementary_palette",
     "to_color_cycle",
     "to_colormap",

@@ -9,7 +9,6 @@ from ._models import Palette
 from ._utils import validate_colors
 from .catalog import get_palette_record, list_colors
 from .palettes import ctc_palette
-from .themes import setup_chinese_font
 
 
 def _resolve_palette(palette: Palette | Iterable[str] | int | str) -> Palette:
@@ -41,19 +40,21 @@ def to_color_cycle(palette: Palette | Iterable[str] | int | str):
     return cycler(color=list(resolved.colors))
 
 
-def plot_color_grid(show_group: bool = False, figsize: tuple[float, float] = (14, 18)):
-    setup_chinese_font()
+def plot_color_grid(show_group: bool = False, figsize: tuple[float, float] | None = None):
     records = list_colors()
     columns = 4 if show_group else 8
     rows = int(np.ceil(len(records) / columns))
+    # 高度随行数自适应，避免色块过扁导致文字溢出/错位
+    if figsize is None:
+        figsize = (columns * 2.2, rows * 0.5)
     fig, axes = plt.subplots(rows, columns, figsize=figsize)
     flat_axes = np.atleast_1d(axes).ravel()
     for axis, record in zip(flat_axes, records):
         axis.set_facecolor(record["hex"])
         label = f'{record["color_id"]} {record["name"]}'
         if show_group:
-            label = f'{label}\nG{record["group_id"]}-{record["subgroup_id"]}'
-        axis.text(0.5, 0.5, label, ha="center", va="center", fontsize=8)
+            label = f'{label}  G{record["group_id"]}-{record["subgroup_id"]}'
+        axis.text(0.5, 0.5, label, ha="center", va="center", fontsize=7)
         axis.set_xticks([])
         axis.set_yticks([])
     for axis in flat_axes[len(records):]:
@@ -62,8 +63,7 @@ def plot_color_grid(show_group: bool = False, figsize: tuple[float, float] = (14
     return fig, axes
 
 
-def plot_palette(palette: Palette | Iterable[str] | int | str, title: str | None = None, figsize: tuple[float, float] = (8, 1.6)):
-    setup_chinese_font()
+def plot_palette(palette: Palette | Iterable[str] | int | str, title: str | None = None, figsize: tuple[float, float] = (8, 2.0)):
     resolved = _resolve_palette(palette)
     fig, ax = plt.subplots(figsize=figsize)
     matrix = np.arange(len(resolved.colors)).reshape(1, -1)
@@ -72,11 +72,11 @@ def plot_palette(palette: Palette | Iterable[str] | int | str, title: str | None
     ax.set_xticklabels(range(1, len(resolved.colors) + 1))
     ax.set_yticks([])
     ax.set_title(title or resolved.name or resolved.key or "Palette")
+    fig.tight_layout()
     return fig, ax
 
 
 def plot_palettes(palettes: Iterable[Palette | Iterable[str] | int | str], figsize: tuple[float, float] | None = None):
-    setup_chinese_font()
     resolved = [_resolve_palette(palette) for palette in palettes]
     fig_height = max(1.6 * len(resolved), 2.0)
     fig, axes = plt.subplots(len(resolved), 1, figsize=figsize or (8, fig_height))

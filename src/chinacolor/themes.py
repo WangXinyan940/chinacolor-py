@@ -78,7 +78,6 @@ def get_theme(name: str) -> dict[str, object]:
 
 
 def apply_theme(name: str) -> dict[str, object]:
-    setup_chinese_font()
     theme = get_theme(name)
     mpl.rcParams.update(theme)
     return theme
@@ -86,7 +85,6 @@ def apply_theme(name: str) -> dict[str, object]:
 
 @contextmanager
 def use_theme(name: str):
-    setup_chinese_font()
     theme = get_theme(name)
     with mpl.rc_context(theme):
         yield theme
